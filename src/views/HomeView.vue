@@ -1,18 +1,36 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <Carousel></Carousel>
+    <!-- <img class="main-logo" src="vshow_png.png"> -->
 </template>
+  
+  <script setup>
+   import Carousel from '@/components/Carousel.vue'
+   import { ref } from 'vue';
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+   var noticias = ref([
+    {
+    imagen: 'vshow_png.png',
+    titulo: "OLAA",
+    subtitulo: "Subti",
+    id: 1,
+    categoria: "categoria"
+   },
+   {
+    imagen: 'vshow_logo.png',
+    titulo: "OLAA",
+    subtitulo: "Subti",
+    id: 1,
+    categoria: "categoria"
+   },
+   {
+    imagen: 'vshow_png.png',
+    titulo: "OLAA",
+    subtitulo: "Subti",
+    id: 1,
+    categoria: "categoria"
+   }
 
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+
+   ])
+  </script>
+  
