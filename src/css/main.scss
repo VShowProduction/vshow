@@ -1,10 +1,10 @@
 body {
     margin: 0;
     background-color: rgb(26, 25, 25);
+    font-family: 'Montserrat', sans-serif;
 }
 
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
@@ -66,6 +66,7 @@ body {
 
   .main-container {
     min-height: 300px;
+    margin-bottom: 30px;
   }
 
   .menu-btn {
@@ -166,4 +167,69 @@ body {
 //     top: 650px;
 //    }
 }
-  
+
+///MAIN
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Distribuye los contenedores en el espacio disponible */
+
+    .image-container {
+        justify-items: center;
+        transform: rotate(15deg);
+    }
+}
+
+
+
+.info-container {
+    background-color: black;
+    max-width: 1000px;
+    max-height: 1000px;
+    -webkit-box-shadow: -1px 0px 12px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 0px 12px 4px rgba(0,0,0,0.75);
+    box-shadow: -1px 0px 12px 4px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    justify-content: center;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+
+    transform: translateX(-50%); 
+    transition: transform 0.4s ease-in-out;
+
+    p {
+        max-width: 65ch;
+        text-align: justify;
+        margin-left: 130px;
+        margin-right: 130px;
+    }
+
+       /* Ajustes para el primer contenedor */
+
+    /* Ajustes para el segundo contenedor */
+    &.left {
+        transform: translateX(50%);
+        margin-left: auto;
+
+        &:hover{
+            transform: translateX(0);
+        }
+    }
+
+    /* Ajustes para el tercer contenedor */
+    &:nth-of-type(3) {
+        transform: translateX(-50%);
+    }
+
+    &:hover {
+        transform: translateX(0); /* Mueve el contenedor a su posición original */
+    }
+
+   
+
+    
+}
+
+
+

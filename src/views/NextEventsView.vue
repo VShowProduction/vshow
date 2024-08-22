@@ -1,6 +1,6 @@
 <template>
     <div>
-       <h1>Proximos Eventos</h1> 
+       <h1>PROXIMAMENTE</h1> 
     </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>ola</h1>
+        <h1>PROXIMAMENTE</h1>
     </div>
 </template>
 
