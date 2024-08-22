@@ -10,7 +10,8 @@ body {
     text-align: center;
     color: #2c3e50;
   }
-  
+
+//Navbar
   nav {
     padding: 0px;
     background-color: black;
@@ -117,5 +118,12 @@ body {
     .navbar {
         flex-direction: column;
     }
+}
+
+///Footer
+
+.footer-container {
+    background-color: black;
+    padding: 100px;
 }
   
