@@ -1,7 +1,7 @@
 <template>
     <div>
         <nav>
-            <img class="logo-nav" :class="{ 'show-logo': iconToggle}" src="vshow_png.png" alt="Logo">
+            <img class="logo-nav" :class="{ 'show-logo': !iconToggle}" src="vshow_png.png" alt="Logo">
 
             <div class="navbar">
                 <button @click="toggleMenu" class="menu-btn">☰</button>
