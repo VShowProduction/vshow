@@ -2,6 +2,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import './sass/main.scss'
+import './sass/card.scss'
+import './sass/proyect.scss'
 import 'animate.css';
 
 

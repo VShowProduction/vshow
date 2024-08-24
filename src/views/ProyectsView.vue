@@ -1,10 +1,9 @@
 <template>
-    <div>
-       <h1>PROXIMAMENTE</h1> 
-    </div>
+       <ProyectMain></ProyectMain>
 </template>
 
 <script setup>
+import ProyectMain from '../components/ProyectMain.vue';
 
 </script>
 

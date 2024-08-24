@@ -26,9 +26,6 @@ import { ref } from 'vue';
 
 const date = new Date;
 const Year = ref(date.getFullYear())
-console.log(date)
-console.log(Year)
-
 </script>
 
 <style lang="scss" scoped>
