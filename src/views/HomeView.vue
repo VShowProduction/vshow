@@ -1,6 +1,6 @@
 <template>
     <Carousel></Carousel>
-    <!-- <Information></Information> -->
+    <Information></Information>
     <!-- <img class="main-logo" src="vshow_png.png"> -->
 </template>
   

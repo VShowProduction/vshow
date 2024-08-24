@@ -26,7 +26,7 @@ const iconToggle = ref(false);
 
 const toggleMenu = () => {
     menuOpen.value = !menuOpen.value;
-    iconToggle.value = menuOpen.value;
+    // iconToggle.value = menuOpen.value;
 };
 
 const handleResize = () => {
