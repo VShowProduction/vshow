@@ -23,13 +23,24 @@
         </div>
 
         <div class="image-container">
-            <picture>
+            <img class="photo-2" src="/quienes_somos_2.png" alt="" width="300" height="400">
+            <picture class="image-1">
                 <source srcset="/quienes-somos.webp" type="img/webp">
-                <img class="photo-1" src="/quienes_somos.png" width="350">
+                <img class="photo-1" src="/quienes_somos.png" width="300">
             </picture>
+            
         </div>
     </div>
     <div class="container">
+        
+        <div class="image-container">
+          
+            <picture class="image-1">
+                <source srcset="/quienes-somos.webp" type="img/webp">
+                <img class="photo-2" src="/que_hacemos.png" width="300">
+            </picture>
+            <img class="photo-1" style="top: -9%;" src="/que_hacemos_2.png" alt="" width="300" height="400">
+        </div>
 
         <div class="info-container left">
             <h1>¿Qué hacemos?</h1>
@@ -80,6 +91,7 @@
                 del stream o video, y solo tenga que presionar "comenzar transmisión" o "grabar".
             </p>
         </div>
+
 
     </div>
     <div class="we-container">

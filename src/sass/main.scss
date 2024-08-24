@@ -160,7 +160,7 @@ body {
 .carousel__item {
     min-height: 500px;
     width: 100%;
-    background-color: $main;
+    background-color: rgb(26, 25, 25);
     color: var(--vc-clr-white);
     font-size: 20px;
     border-radius: 8px;
@@ -228,14 +228,37 @@ body {
     justify-content: space-between; /* Distribuye los contenedores en el espacio disponible */
     display: flex;
     margin-bottom: 45px;
+    position: relative; /* Importante para que las imágenes se posicionen correctamente */
+
     .image-container {
         justify-items: center;
-        transform: rotate(15deg);
-        margin-right: 60px;
+        display: flex;
+        position: relative; /* Mantiene las imágenes en su flujo normal */
+        z-index: 1; /* Las imágenes se mantienen detrás del info-container */
 
-        -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
-        box-shadow: 0px 0px px 0px rgba(0,0,0,0.75);
+        .photo-1{
+          transform: rotate(15deg);
+          margin-right: 60px;
+          -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+          -moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+          box-shadow: 0px 0px px 0px rgba(0,0,0,0.75);
+          position: relative;
+          top: -20px; /* Mueve la imagen hacia arriba */
+          z-index: 1; /* Asegura que esta imagen esté encima de la otra */
+          margin-top: 20px;
+
+        }
+
+        .photo-2{
+          transform: rotate(345deg);
+          margin-right: 60px;
+          -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+          -moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+          box-shadow: 0px 0px px 0px rgba(0,0,0,0.75);
+          position: relative;
+          left: 100px; /* Mueve la imagen hacia abajo */
+          z-index: 1; /* Asegura que esta imagen esté debajo de la otra */
+        }
     }
 }
 
@@ -253,6 +276,9 @@ body {
     margin-bottom: 20px;
     justify-content: center;
     overflow: hidden; /* Asegura que el contenido no se desborde */
+
+    position: relative; /* Para mantener la prioridad de las imágenes */
+    z-index: 2; /* Asegura que el texto se muestre encima de las imágenes */
 
     transform: translateX(-50%); 
     transition: transform 0.4s ease-in-out;
@@ -293,5 +319,123 @@ body {
     
 }
 
+
+@media (min-width: 1920px) {
+  .container {
+    flex-direction: row; /* Mantén el diseño en fila para pantallas grandes */
+    align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+
+    .image-container {
+      margin-bottom: 0; /* Elimina el margen inferior para pantallas grandes */
+      .photo-1, .photo-2 {
+        position: relative; /* Asegúrate de que las imágenes no se superpongan */
+      }
+    }
+
+    .info-container {
+      max-width: 50%; /* Ajusta el ancho del contenedor de información */
+      padding: 20px;
+      text-align: center; /* Alinea el texto a la izquierda para pantallas grandes */
+      transform: translateX(0); /* Resetea cualquier transformación lateral */
+      margin: 0; /* Elimina el margen inferior para pantallas grandes */
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+
+  .container {
+    flex-direction: column-reverse; /* Coloca los contenedores en una columna */
+    align-items: center; /* Centra los contenedores */
+    margin-bottom: 30px;
+
+    .image-container {
+      justify-content: center;
+      margin-bottom: 20px;
+      order: 1;
+      .photo-1,
+      .photo-2 {
+        transform: none;
+        margin: 0 auto;
+        position: relative;
+        top: 0;
+        left: 0;
+        max-width: 100%;
+        z-index: 1;
+      }
+    }
+
+    .info-container {
+      order: 2;
+      max-width: 90%; /* Ajusta el ancho del contenedor */
+      transform: translateX(0); /* No mueve el contenedor lateralmente */
+      margin: 20px 0;
+      padding: 20px; /* Agrega relleno para mejorar la presentación en dispositivos más pequeños */
+      text-align: center;
+      z-index: 2;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column; /* Coloca los contenedores en una columna */
+    align-items: center; /* Centra los contenedores */
+    margin-bottom: 30px;
+
+    .info-container {
+      max-width: 90%; /* Ajusta el ancho del contenedor */
+      transform: translateX(0); /* No mueve el contenedor lateralmente */
+      margin: 20px 0;
+    }
+
+    .image-container {
+      margin-bottom: 20px; /* Añade espacio entre las imágenes y el texto */
+      justify-content: center;
+      .photo-1, .photo-2 {
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        transform: none; /* Resetea cualquier transformación */
+        margin: 10px 0; /* Añade espacio entre las imágenes */
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .info-container {
+    padding: 20px;
+    margin: 10px 0;
+    order: 1;
+  }
+
+  .image-container {
+    flex-direction: column; /* Coloca las imágenes en una columna */
+    order: 2;
+    .photo-1, .photo-2 {
+      width: 80%; /* Ajusta el tamaño de las imágenes */
+      margin: 10px auto; /* Centra las imágenes */
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .info-container {
+    max-width: 95%; /* Aumenta el ancho del contenedor */
+    margin: 5px 0;
+    p {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+
+  .image-container {
+    .photo-1, .photo-2 {
+      width: 90%; /* Ajusta el tamaño para pantallas muy pequeñas */
+    }
+  }
+}
 
 
