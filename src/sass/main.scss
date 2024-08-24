@@ -8,6 +8,7 @@ body {
     background-color: rgb(26, 25, 25);
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
+    background-image: url('/FONDO.png');
 }
 
 #app {
@@ -179,6 +180,10 @@ body {
   .carousel__prev,
   .carousel__next {
     box-sizing: content-box;
+  }
+
+  .carousel__icon {
+    color: white;
   }
 
 ///Footer

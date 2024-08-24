@@ -37,9 +37,9 @@
           
             <picture class="image-1">
                 <source srcset="/quienes-somos.webp" type="img/webp">
-                <img class="photo-2" src="/que_hacemos.png" width="300">
+                <img style="margin-top: 50px;" class="photo-2" src="/que_hacemos.png" width="300">
             </picture>
-            <img class="photo-1" style="top: -9%;" src="/que_hacemos_2.png" alt="" width="300" height="400">
+            <img class="photo-1" style="top: -9%; margin-top: 50px;" src="/que_hacemos_2.png" alt="" width="300" height="400">
         </div>
 
         <div class="info-container left">
