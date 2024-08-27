@@ -25,16 +25,10 @@
   <Modal
       :showModal="showModal"
       :isError="errorModal"
-      message="EMAIL ENVIADO CORRECTAMENTE"
+      :message="textoModal"
       @cerrarModal="cerrarModal"
     />
 
-    <Modal
-      :showModal="showModal"
-      :isError="errorModal"
-      message="HUBO UN ERROR AL ENVIAR EL EMAIL"
-      @cerrarModal="cerrarModal"
-    />
 </template>
 
 <script setup>
@@ -46,7 +40,8 @@ const subject = ref('');
 const message = ref('');
 const name = ref('');
 
-const errorModal = ref()
+const errorModal = ref();
+const textoModal = ref('EMAIL ENVIADO CORRECTAMENTE');
 
 const showModal = ref(false);
 const enviarMail = async () => {
@@ -57,6 +52,7 @@ const enviarMail = async () => {
     errorModal.value = false;
     showModal.value = true;
   }else {
+    textoModal.value = "ERROR AL ENVIAR EL MAIL"
     errorModal.value = true;
     showModal.value = true;
   }
