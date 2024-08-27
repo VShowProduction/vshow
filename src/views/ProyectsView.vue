@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import ProyectMain from '../components/ProyectMain.vue';
+import ProyectMain from '../components/ProyectMainComponent.vue';
 
 </script>
 

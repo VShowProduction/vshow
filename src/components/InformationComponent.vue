@@ -47,7 +47,7 @@
             <p>
                 Nuestra misión es ofrecer una solución creativa a los creadores de contenido que, por falta de conocimiento,
                 no pueden explotar el potencial de sus propios eventos y mejorar su presentación.
-                <br>
+                <br><br>
                 <span>Nuestro equipo se encarga de proporcionar soluciones como:</span>
             </p>
 
@@ -93,16 +93,6 @@
         </div>
 
 
-    </div>
-    <div class="we-container">
-        <div class="info-container">
-            <h1>Nosotros</h1>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nisi numquam similique quasi
-                magni et tenetur mollitia, dolores consequuntur quae rem, quam nesciunt libero minima illo, impedit
-                temporibus sunt! Tempore?
-            </p>
-        </div>
     </div>
 </template>
 

@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import ContactView from '../views/ContactView.vue'
 import NextEventsView from '../views/NextEventsView.vue'
 import ProyectsView from '../views/ProyectsView.vue'
+import ProyectDetailView from '../views/ProyectDetailView.vue'
 
 const routes = [
   {
@@ -24,6 +25,12 @@ const routes = [
     path: '/proyectos',
     name: 'proyects',
     component: ProyectsView
+  },
+  {
+    path: '/proyectos/:id',  // Ruta dinámica con parámetro id
+    name: 'proyectDetail',
+    component: ProyectDetailView,  // Componente para mostrar detalles del proyecto
+    props: true // Esto permite que el id sea pasado como prop al componente
   },
 ]
 

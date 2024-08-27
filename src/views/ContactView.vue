@@ -1,11 +1,9 @@
 <template>
-    <div>
-        <h1>PROXIMAMENTE</h1>
-    </div>
+  <ContactComponent/>
 </template>
 
 <script setup>
-
+    import ContactComponent from '../components/ContactComponent.vue';
 </script>
 
 <style lang="scss" scoped>
