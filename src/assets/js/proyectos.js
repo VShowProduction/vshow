@@ -3,45 +3,26 @@
 const proyectos = [
     {
         id: 1,
-        titulo: 'PENCAST',
-        texto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non odio imperdiet quam mattis viverra eget sed risus. Cras non egestas ligula. Praesent ac leo at nisi elementum dignissim et ornare massa. Vestibulum egestas mauris felis, sit amet viverra urna bibendum ut. Ut ut pretium erat, vel facilisis urna. Pellentesque auctor malesuada facilisis. Nunc sed nibh ut arcu tristique tincidunt.',
-        img: '/vshow/SLIDER-1.webp',
-        fecha: '2024-01-29'
+        titulo: 'FREESTYLE VIRTUAL FIGTHS',
+        texto: '"FVF" o "FreeStyle Virtual Fights" fue un evento experimental de "Vshow" en el que se realizaron las primeras pruebas técnicas para futuros eventos.',
+        texto2: 'Igualando competiciones de la vida real, tales como "Red Bull Batalla de Gallos" o "Freestyle Master Series", FVF buscaba desarrollar una competencia de freestylers (rap) que competirían en un formato de torneo desde los cuartos de final (8 participantes), donde se consagraría a "2bines" como el primer campeón del evento.',
+        texto3: 'El énfasis de este evento se centró en lograr una sincronización eficaz entre DJ y anfitrión para mantener buenos tiempos a pesar de la latencia provocada por la conexión de los competidores desde múltiples países (Chile, Argentina, Corea del Sur, Perú, México, Estados Unidos).',
+        texto4: 'Este evento contó con un excelente jurado:',
+        list: 'Zilverzk: Popular streamer de VRChat con millones de seguidores.|AuroraAtria: Joven promesa de la agencia Lefolk, conocida por sus populares covers.|KyoSmkr: Vtuber novato que comenzaba su carrera en Twitch.', 
+        texto5: 'Con un alcance total de 1,400 usuarios en vivo, FVF se convirtió en uno de los eventos con más evolución que había realizado Vshow hasta la fecha.',
+        img: '/vshow/fvf.webp',
+        img2: '/vshow/fvf3.webp',
+        img3: '/vshow/fvf6.webp',
+        img4: '/vshow/fvf4.webp',
+        img5: '/vshow/fvf5.webp',
+        fecha: '2024-21-07',
+        video: '/vshow/videos/FVF-Video.mp4'
     },
-
     {
         id: 2,
-        titulo: 'VT WORDL CUP',
-        texto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non odio imperdiet quam mattis viverra eget sed risus. Cras non egestas ligula. Praesent ac leo at nisi elementum dignissim et ornare massa. Vestibulum egestas mauris felis, sit amet viverra urna bibendum ut. Ut ut pretium erat, vel facilisis urna. Pellentesque auctor malesuada facilisis. Nunc sed nibh ut arcu tristique tincidunt.',
-        texto2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et ex non nibh posuere sollicitudin. Duis id urna tortor. Proin ornare iaculis luctus. Proin rhoncus turpis vel nisi facilisis ultricies. Proin ac ante vitae diam congue blandit. In eu ipsum ut nisi accumsan congue auctor vel eros. Quisque turpis ligula, molestie sit amet dui non, pellentesque vehicula massa. Nunc imperdiet mi id arcu faucibus, vitae pellentesque ligula blandit. Nulla at sollicitudin turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum hendrerit enim dui, eget ultrices ante malesuada vitae. Sed sed nisi id justo dignissim efficitur.',
-        img: '/vshow/SLIDER-1.webp',
-        img2: '/vshow/Slider-2.webp',
-        fecha: '2024-01-29'
-    },
-
-    {
-        id: 3,
-        titulo: 'EVENTO 3',
-        texto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non odio imperdiet quam mattis viverra eget sed risus. Cras non egestas ligula. Praesent ac leo at nisi elementum dignissim et ornare massa. Vestibulum egestas mauris felis, sit amet viverra urna bibendum ut. Ut ut pretium erat, vel facilisis urna. Pellentesque auctor malesuada facilisis. Nunc sed nibh ut arcu tristique tincidunt.',
-        img: '/vshow/SLIDER-1.webp',
-        fecha: '2024-01-29'
-    },
-
-    {
-        id: 4,
-        titulo: 'EVENTO RE 4',
-        texto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non odio imperdiet quam mattis viverra eget sed risus. Cras non egestas ligula. Praesent ac leo at nisi elementum dignissim et ornare massa. Vestibulum egestas mauris felis, sit amet viverra urna bibendum ut. Ut ut pretium erat, vel facilisis urna. Pellentesque auctor malesuada facilisis. Nunc sed nibh ut arcu tristique tincidunt.',
-        img: '/vshow/SLIDER-1.webp',
-        fecha: '2024-01-29'
-    },
-    {
-        id: 5,
-        titulo: 'EVENTO RE 5',
-        texto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non odio imperdiet quam mattis viverra eget sed risus. Cras non egestas ligula. Praesent ac leo at nisi elementum dignissim et ornare massa. Vestibulum egestas mauris felis, sit amet viverra urna bibendum ut. Ut ut pretium erat, vel facilisis urna. Pellentesque auctor malesuada facilisis. Nunc sed nibh ut arcu tristique tincidunt.',
-        img: '/vshow/SLIDER-1.webp',
-        fecha: '2024-01-29'
-    },
-
+        img: '/vshow/charming_melodies.png',
+        titulo: 'CHARMING MELODIES',
+    }
 ]
 
 export default proyectos 

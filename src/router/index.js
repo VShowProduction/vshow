@@ -4,6 +4,7 @@ import ContactView from '../views/ContactView.vue'
 import NextEventsView from '../views/NextEventsView.vue'
 import ProyectsView from '../views/ProyectsView.vue'
 import ProyectDetailView from '../views/ProyectDetailView.vue'
+import ServicesView from '../views/ServicesView.vue'
 
 const routes = [
   {
@@ -31,6 +32,11 @@ const routes = [
     name: 'proyectDetail',
     component: ProyectDetailView,  // Componente para mostrar detalles del proyecto
     props: true // Esto permite que el id sea pasado como prop al componente
+  },
+  {
+    path: '/servicios',
+    name: 'services',
+    component: ServicesView, 
   },
 ]
 
