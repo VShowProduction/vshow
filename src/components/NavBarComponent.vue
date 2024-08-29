@@ -30,7 +30,7 @@ const toggleMenu = () => {
 };
 
 const handleResize = () => {
-    if (window.innerWidth > 800) {
+    if (window.innerWidth > 1000) {
         menuOpen.value = false;
         iconToggle.value = false;
     }else {

@@ -53,6 +53,9 @@ body {
     align-items: center;
     height: 100%;
     margin-bottom: 10px;
+
+    width: 100%;
+
     a {
         font-weight: bold;
         color: white;
@@ -97,6 +100,8 @@ body {
   .navbar {
     display: flex;
     justify-content: center;
+    flex-grow: 1;
+    width: 100%;
   }
 
   .main-container {
@@ -127,7 +132,10 @@ body {
     display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
+
+
+
     .menu-btn {
         display: block;
     }
@@ -203,6 +211,7 @@ body {
             padding-left: 20px;
             padding-right: 20px;
             font-size: 50px;
+
             a {
                 color: white;
             }
@@ -211,9 +220,13 @@ body {
                 color: white;
 
             }
+            
+            svg {
+              transition: transform 0.2s ease-in-out; // Transición suave
+            }
         }
 
-        li:hover{
+        svg:hover{
             transform: scale(1.1);  // Aumenta el tamaño del li sin afectar el flujo
             transition: transform 0.2s ease-in-out; // Transición suave
         }
@@ -433,6 +446,10 @@ body {
     p {
       margin-left: 20px;
       margin-right: 20px;
+    }
+
+    ul {
+      margin: 0;
     }
   }
 

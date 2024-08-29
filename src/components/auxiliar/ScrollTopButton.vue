@@ -28,6 +28,9 @@
     border: 3px solid white;
     font-size: 24px;
     z-index: 1000;
+
+    transition: transform 0.2s ease-in-out;
+
   }
   
   .scroll-to-top:hover {

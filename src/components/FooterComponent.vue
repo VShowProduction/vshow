@@ -1,6 +1,6 @@
 <template>
     <div class="footer-container">
-        <div class="image-container">
+        <div class="footer-image-container">
             <img src="/iconos.png" height="200" width="200">
         </div>
         <div>
