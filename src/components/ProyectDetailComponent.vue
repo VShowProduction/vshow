@@ -6,22 +6,22 @@
             <h1><strong>{{ project.titulo }}</strong></h1>
             <span>{{ project.fecha }}</span>
             <p>{{ project.texto }}</p>
-            <div v-if="project.img2" class="img-detail border-line" :style="{ backgroundImage: `url(${project.img2})` }">
+            <div v-if="project.img2" class="img-detail" :style="{ backgroundImage: `url(${project.img2})` }">
             </div>
             <p v-if="project.texto2">{{ project.texto2 }}</p>
-            <div v-if="project.img3" class="img-detail border-line" :style="{ backgroundImage: `url(${project.img3})` }">
+            <div v-if="project.img3" class="img-detail" :style="{ backgroundImage: `url(${project.img3})` }">
             </div>
             <p v-if="project.texto3">{{ project.texto3 }}</p>
-            <div v-if="project.img4" class="img-detail border-line" :style="{ backgroundImage: `url(${project.img4})` }">
+            <div v-if="project.img4" class="img-detail" :style="{ backgroundImage: `url(${project.img4})` }">
             </div>
             <p v-if="project.texto4">{{ project.texto4 }}</p>
             <ul v-if="listItems.length > 0">
                 <li v-for="(item, index) in listItems" :key="index">{{ item }}</li>
             </ul>
-            <div v-if="project.img5" class="img-detail border-line" :style="{ backgroundImage: `url(${project.img5})` }">
+            <div v-if="project.img5" class="img-detail" :style="{ backgroundImage: `url(${project.img5})` }">
             </div>
             <p v-if="project.texto5">{{ project.texto5 }}</p>
-            <div v-if="project.img6" class="img-detail border-line" :style="{ backgroundImage: `url(${project.img6})` }">
+            <div v-if="project.img6" class="img-detail" :style="{ backgroundImage: `url(${project.img6})` }">
             </div>
             <div class="video" v-if="project.video">
                 <hr>
