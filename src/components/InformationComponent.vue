@@ -52,36 +52,7 @@
             </p>
 
             <div style="text-align: center;">
-                <ul>
-                    <li>
-                        Sistemas de cámaras en vivo con múltiples ángulos, drones y cámaras manuales.
-                    </li>
-                    <li>
-                        Sistemas de sonido.
-                    </li>
-                    <li>
-                        Iluminación y efectos especiales.
-                    </li>
-                    <li>
-                        Superposiciones en tiempo real.
-                    </li>
-                    <li>
-                        Entornos 3D.
-                    </li>
-                    <li>
-                        Diseño de imágenes.
-                    </li>
-                    <li>
-                        Edición de video.
-                    </li>
-                    <li>
-                        Programación.
-                    </li>
-                    <li>
-                        Gestión de OBS y transmisión en vivo.
-                    </li>
-                </ul>
-
+                <router-link to="/servicios">VER MAS</router-link>
             </div>
 
             <p>

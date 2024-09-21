@@ -1,11 +1,9 @@
 <template>
-    <div>
-       <h1>PROXIMAMENTE</h1> 
-    </div>
+  <NextEventsComponent></NextEventsComponent>
 </template>
 
 <script setup>
-
+import NextEventsComponent from '../components/NextEventsComponent.vue';
 </script>
 
 <style lang="scss" scoped>
