@@ -5,6 +5,7 @@ import NextEventsView from '../views/NextEventsView.vue'
 import ProyectsView from '../views/ProyectsView.vue'
 import ProyectDetailView from '../views/ProyectDetailView.vue'
 import ServicesView from '../views/ServicesView.vue'
+import FormularioView from '../views/FormularioView.vue'
 
 const routes = [
   {
@@ -37,6 +38,11 @@ const routes = [
     path: '/servicios',
     name: 'services',
     component: ServicesView, 
+  },
+  {
+    path: '/FormularioWorldCup',
+    name: 'formulario',
+    component: FormularioView, 
   },
 ]
 

@@ -1,0 +1,24 @@
+@use 'variables' as *;
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    background-color: $black;
+    margin: 30px;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+
+    .form-input {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        margin: 15px;
+        width: 300px;
+        label {
+            
+        }
+    }
+
+}

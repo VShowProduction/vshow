@@ -7,6 +7,8 @@ import './sass/proyect.scss'
 import './sass/contact.scss'
 import './sass/services.scss'
 import './sass/nosotros.scss'
+import './sass/form.scss'
+
 
 import 'animate.css';
 
@@ -16,6 +18,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faUserSecret, faArrowUp, faLongArrowAltUp, faCheckCircle, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter,  faTwitch, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
+import PrimeVue from 'primevue/config';
+import Aura from '@primevue/themes/aura';
+
+import axios from 'axios'
 
 
 
@@ -24,5 +30,11 @@ library.add (faTwitch, faTwitter, faUserSecret, faYoutube, faArrowUp, faLongArro
 const app = createApp(App);
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(router);
+app.use(PrimeVue, {
+    theme: {
+        preset: Aura
+    }
+});
+app.use(axios);
 app.mount('#app');
 
