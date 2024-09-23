@@ -5,20 +5,56 @@
     display: flex;
     flex-direction: column;
     background-color: $black;
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px px 0px rgba(0, 0, 0, 0.75);
     margin: 30px;
     padding: 30px;
     justify-content: center;
     align-items: center;
 
-    .form-input {
-        display: flex;
-        flex-direction: column;
-        text-align: start;
-        margin: 15px;
-        width: 300px;
-        label {
-            
-        }
+    .inputs-container {
+
+        background-color: $black-hover;
+        border-radius: 20px;
+        width: 100%;
+        max-width: 800px;
+        .form-input {
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+            margin: 30px;
+            .group-container {
+                margin: 10px;
+    
+                .p-radiobutton {
+                    margin-right: 10px;
+                    margin-left: 5px;
+                }
+            }
+    
+            .info {
+                font-size: large;
+                font-weight: bold;
+                margin: 5px;
+            }
+    
+            label {
+                margin: 5px 0 5px 0;
+            }
     }
+
+    .error-message {
+        color: red;
+        font-size: 12px;
+        height: 20px; /* Reservar un espacio fijo para el mensaje */
+        visibility: visible; /* Mostrar el mensaje cuando esté presente */
+        margin-top: 3px;
+      }
+      
+      .error-message.hidden {
+        visibility: hidden; /* Ocultar el mensaje sin afectar el diseño */
+      }
+}
 
 }
