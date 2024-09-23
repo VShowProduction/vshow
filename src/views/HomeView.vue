@@ -1,7 +1,7 @@
 <template>
     <Carousel></Carousel>
     <Information></Information>
-    <!-- <Nosotros></Nosotros> -->
+    <Nosotros></Nosotros>
     <!-- <img class="main-logo" src="vshow_png.png"> -->
 </template>
   

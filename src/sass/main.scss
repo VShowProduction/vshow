@@ -94,7 +94,7 @@ body {
     }
 
     .logo-nav{
-        width: 80px;
+        width: 90px;
         height: auto;
         margin: 10px;
     }
@@ -338,6 +338,10 @@ body {
     text-align: justify;
     max-width: 65ch;
     margin: 0px 130px 0px 130px;
+   }
+
+   a {
+    color: $main;
    }
 
     

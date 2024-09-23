@@ -1,0 +1,77 @@
+@use 'variables' as *;
+
+
+.grid-container {
+    background-color: black;
+    width: 1300px;
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px px 0px rgba(0, 0, 0, 0.75);
+    margin: 0 auto;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.line-bottom {
+    border-bottom: 2px solid white;
+    width: 80%; // Ajustar el ancho de la línea
+    padding: 2px;
+    margin: 20px auto 0; // Centramos la línea horizontalmente
+}
+
+
+.we-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 50px;
+    
+    h1 {
+        color: $main;
+    }
+
+    &.reverse-layout {
+        flex-direction: row-reverse; // Invertir el orden de los elementos (imagen a la izquierda)
+    }
+
+    .twitter {
+            text-decoration: none;
+            list-style: none;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 50px;
+
+            a {
+                color: $main;
+            }
+
+            a:visited {
+                color: $main;
+
+            }
+
+            svg {
+              transition: transform 0.2s ease-in-out; // Transición suave
+            }
+
+            svg:hover{
+            transform: scale(1.1);  // Aumenta el tamaño del li sin afectar el flujo
+            transition: transform 0.2s ease-in-out; // Transición suave
+        }
+    }
+
+
+    .we-info {
+
+        justify-content: center;
+
+        p {
+            max-width: 65ch;
+            text-align: justify;
+        }
+    }
+
+}

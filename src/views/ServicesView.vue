@@ -1,9 +1,9 @@
 <template>
-    <ServiceDetail></ServiceDetail>
+<ServiceComponent></ServiceComponent>
 </template>
 
 <script setup>
-import ServiceDetail from '../components/ServiceDetail.vue';
+ import ServiceComponent from '../components/ServiceComponent.vue';
 </script>
 
 <style lang="scss" scoped>

@@ -5,6 +5,8 @@ import './sass/main.scss'
 import './sass/card.scss'
 import './sass/proyect.scss'
 import './sass/contact.scss'
+import './sass/services.scss'
+import './sass/nosotros.scss'
 
 import 'animate.css';
 
