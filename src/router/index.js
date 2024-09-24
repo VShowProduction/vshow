@@ -6,6 +6,10 @@ import ProyectsView from '../views/ProyectsView.vue'
 import ProyectDetailView from '../views/ProyectDetailView.vue'
 import ServicesView from '../views/ServicesView.vue'
 import FormularioView from '../views/FormularioView.vue'
+import RegistrosView from '../views/RegistrosView.vue'
+import LoginView from '../views/LoginView.vue'
+import { useUserStore } from '../store/userStore'
+
 
 const routes = [
   {
@@ -44,11 +48,33 @@ const routes = [
     name: 'formulario',
     component: FormularioView, 
   },
+  {
+    path: '/login',
+    name: 'Login',
+    component: LoginView, 
+  },
+  {
+    path: '/Registros',
+    name: 'Registros',
+    component: RegistrosView,
+    meta: { requiresAuth: true }  // Ruta protegida
+  }
 ]
 
 const router = createRouter({
   history: createWebHistory('#'),
   routes
 })
+
+router.beforeEach((to, from, next) => {
+  const store = useUserStore();
+
+  const isAuthenticated = store.isLoged; // o tu sistema de autenticación
+  if (to.meta.requiresAuth && !isAuthenticated) {
+    next({ name: 'Login' });
+  } else {
+    next();
+  }
+});
 
 export default router

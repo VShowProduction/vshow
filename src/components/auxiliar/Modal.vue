@@ -4,11 +4,12 @@
         <div class="modal-header">
           <span class="modal-icon">
             <font-awesome-icon class="error-icon" v-if="isError" :icon="['fas', 'exclamation-circle']" />
-            <font-awesome-icon v-else :icon="['fas', 'check-circle']" />
+            <font-awesome-icon v-if="!isLoading && !isError" :icon="['fas', 'check-circle']" />
+            <font-awesome-icon v-if="isLoading" :icon="['fas', 'spinner']" spin />
           </span>
           <h2>{{ message }}</h2>
         </div>
-        <button class="modal-button" :class="{'error': isError}" @click="closeModal">OK</button>
+        <button v-if="!isLoading" class="modal-button" :class="{'error': isError}" @click="closeModal">OK</button>
 
       </div>
     </div>
@@ -20,7 +21,8 @@
   const props = defineProps({
     showModal: Boolean,
     isError: Boolean,
-    message: String
+    message: String,
+    isLoading: Boolean,
   });
 
   const emits = defineEmits(['cerrarModal'])

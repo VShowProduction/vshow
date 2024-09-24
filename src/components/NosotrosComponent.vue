@@ -87,6 +87,7 @@ const we = ref(
             texto3: 'Sin embargo, su versatilidad le permite cubrir prácticamente cualquier función dentro del equipo.',
             tw: 'https://x.com/Lyroy34'
         },
+        
 
     ]
 );
