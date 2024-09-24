@@ -58,16 +58,12 @@ onMounted(() => {
 
     const id = route.params.id;
 
-    console.log('ID recibido:', id); // Verifica que el ID sea el esperado
-    console.log('Proyectos:', proyectos);
-
     const filteredProjects = proyectos.filter(proyecto => proyecto.id === Number(id));
 
     if (filteredProjects.length > 0) {
         project.value = filteredProjects[0];
 
         if (project.value.list) {
-            console.log('hay list')
             listItems.value = project.value.list.split('|');
             listItems.value.forEach(element => {
                 element.trimEnd();

@@ -22,7 +22,6 @@ onMounted(() => {
 })
 
 const details = () => {
-    console.log(props.id)
     router.push(`/proyectos/${props.id}`)
 }
 

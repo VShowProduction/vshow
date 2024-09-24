@@ -344,13 +344,9 @@ const submitForm = async () => {
         showModal.value = true;
 
         const data = await getDocs(collection(db, "inscripciones"));
-        console.log(data.docs)
         inscripciones.value = data.docs
             .map(doc => ({ ...doc.data() }))
-        console.log(inscripcion.value)
         const total = inscripciones.value.length + 1;
-
-        console.log(total)
 
         await setDoc(doc(db, "inscripciones", total.toString()), inscripcion)
 
