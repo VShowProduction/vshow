@@ -20,7 +20,7 @@ const proyectos = [
     },
     {
         id: 2,
-        img: '/vshow/charming_melodies.png',
+        img: '/vshow/charming_melodies.jpg',
         titulo: 'CHARMING MELODIES',
     }
 ]
