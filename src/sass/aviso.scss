@@ -62,12 +62,18 @@
         font-size: 0.85rem;
         margin: 0;
       }
-  
-      a {
-        font-size: 0.85rem;
-        color: $main;
+    }
+
+    a {
+      font-size: 0.85rem;
+      text-decoration: none;
+
+      &:visited {
+        color: white;
       }
     }
+
+    
 
     .close-btn {
       position: absolute;
