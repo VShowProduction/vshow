@@ -19,39 +19,56 @@
     position: fixed;
     bottom: 300px;
     right: 0;
-    background-color: $black;
+    // background-color: $black;
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-image: url('/formulario_banner.png');
     box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75);
-    border-radius: 2px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
     padding: 10px;
+    width: 300px;
+    height: 130px;
     display: flex;
     align-items: center;
     cursor: pointer;
     max-width: 300px;
+    z-index: 999;
+    transition: transform 0.2s ease-in-out; // Transición suave
+
+
+    &:hover {
+      transform: scale(1.02);  // Aumenta el tamaño del li sin afectar el flujo
+      transition: transform 0.2s ease-in-out; // Transición suave
+    }
 
     span {
         color: $main;
     }
   
     /* Sombra que titila */
-    animation: shadowPulse 1s infinite;
+    // animation: shadowPulse 1s infinite;
   
-    @keyframes shadowPulse {
-      0% {
-        box-shadow: 0px 0px 13px 0px rgba(48, 241, 125, 0.75);
-      }
-      50% {
-        box-shadow: 0px 0px 20px 5px rgba(48, 241, 125, 1);
-      }
-      100% {
-        box-shadow: 0px 0px 13px 0px rgba(48, 241, 125, 0.75);
-      }
-    }
+    // @keyframes shadowPulse {
+    //   0% {
+    //     box-shadow: 0px 0px 13px 0px rgba(48, 241, 125, 0.75);
+    //   }
+    //   50% {
+    //     box-shadow: 0px 0px 20px 5px rgba(48, 241, 125, 1);
+    //   }
+    //   100% {
+    //     box-shadow: 0px 0px 13px 0px rgba(48, 241, 125, 0.75);
+    //   }
+    // }
   
     .aviso-content {
       display: flex;
       align-items: center;
       flex-direction: column;
       gap: 10px;
+      width: 300px;
+      height: 130px;
   
       img {
         width: 40px;
@@ -78,7 +95,7 @@
     .close-btn {
       position: absolute;
       top: 5px;
-      left: 5px;
+      left: 20px;
       background: none;
       border: none;
       color: #ffffff;

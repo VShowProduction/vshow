@@ -5,9 +5,6 @@
         <button class="close-btn" @click="closeAviso">×</button> <!-- Botón de cierre -->
         <RouterLink to="/FormularioWorldCup">
         <div class="aviso-content">
-          <img src="/LOGO_WC.png" width="70px"/>
-          <p>YA ESTA DISPONIBLE LA INSCRIPCION PARA LA <span>VT WORLD CUP 2</span></p>
-          <span>Ir al formulario</span>
         </div>
          </RouterLink>
       </div>
