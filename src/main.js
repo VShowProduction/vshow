@@ -9,6 +9,8 @@ import './sass/contact.scss'
 import './sass/services.scss'
 import './sass/nosotros.scss'
 import './sass/form.scss'
+import './sass/registros.scss'
+import './sass/aviso.scss'
 
 
 import 'animate.css';

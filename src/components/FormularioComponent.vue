@@ -23,7 +23,8 @@
                     <RadioButton v-model="radioPlataforma" inputId="kick" name="kick" value="Kick"
                         :invalid="!plataformaValido" :disabled="isDisabled" />
                 </div>
-                <small :class="{ 'error-message': true, 'hidden': plataformaValido }" class="error-message">Este campo es
+                <small :class="{ 'error-message': true, 'hidden': plataformaValido }" class="error-message">Este campo
+                    es
                     requerido.</small>
             </div>
 
@@ -50,7 +51,8 @@
             </div>
 
             <div class="form-input">
-                <div class="info">¿Dispones del tiempo necesariop para participar del evento? (4/5 días de duracion)</div>
+                <div class="info">¿Dispones del tiempo necesariop para participar del evento? (4/5 días de duracion)
+                </div>
                 <div class="group-container">
                     <label for="si">Si</label>
                     <RadioButton v-model="radioTiempoEvento" inputId="si" name="si" value="Si"
@@ -59,12 +61,14 @@
                     <RadioButton v-model="radioTiempoEvento" inputId="no" name="no" value="No"
                         :invalid="!tiempoEventoValido" :disabled="isDisabled" />
                 </div>
-                <small :class="{ 'error-message': true, 'hidden': tiempoEventoValido }" class="error-message">Este campo es
+                <small :class="{ 'error-message': true, 'hidden': tiempoEventoValido }" class="error-message">Este campo
+                    es
                     requerido.</small>
             </div>
 
             <div class="form-input">
-                <div class="info">¿Dispones del tiempo para colaboar con toda la producción del marketing del evento?</div>
+                <div class="info">¿Dispones del tiempo para colaboar con toda la producción del marketing del evento?
+                </div>
                 <div class="group-container">
                     <label for="si">Si</label>
                     <RadioButton v-model="radioTiempoMarketing" inputId="si" name="si" value="Si"
@@ -73,28 +77,32 @@
                     <RadioButton v-model="radioTiempoMarketing" inputId="no" name="no" value="No"
                         :invalid="!tiempoMarketingValido" :disabled="isDisabled" />
                 </div>
-                <small :class="{ 'error-message': true, 'hidden': tiempoMarketingValido }" class="error-message">Este campo
+                <small :class="{ 'error-message': true, 'hidden': tiempoMarketingValido }" class="error-message">Este
+                    campo
                     es
                     requerido.</small>
             </div>
 
             <div class="form-input">
-                <div class="info">Estas dispuesto a un nivel de compromiso completo para asistir a dinámicas y demás tareas
+                <div class="info">Estas dispuesto a un nivel de compromiso completo para asistir a dinámicas y demás
+                    tareas
                     que el staff te pida (el horario de estas seria dispuesto por el staff)</div>
                 <div class="group-container">
                     <label for="si">Si</label>
-                    <RadioButton v-model="radioCompromiso" inputId="si" name="si" value="Si" :invalid="!compromisoValido"
-                        :disabled="isDisabled" />
+                    <RadioButton v-model="radioCompromiso" inputId="si" name="si" value="Si"
+                        :invalid="!compromisoValido" :disabled="isDisabled" />
                     <label for="no">No</label>
-                    <RadioButton v-model="radioCompromiso" inputId="no" name="no" value="No" :invalid="!compromisoValido"
-                        :disabled="isDisabled" />
+                    <RadioButton v-model="radioCompromiso" inputId="no" name="no" value="No"
+                        :invalid="!compromisoValido" :disabled="isDisabled" />
                 </div>
-                <small :class="{ 'error-message': true, 'hidden': compromisoValido }" class="error-message">Este campo es
+                <small :class="{ 'error-message': true, 'hidden': compromisoValido }" class="error-message">Este campo
+                    es
                     requerido.</small>
             </div>
 
             <div class="form-input">
-                <div class="info">¿Estas dispuesto a seguir cada una de las reglas que el torneo impondra de manera interna?
+                <div class="info">¿Estas dispuesto a seguir cada una de las reglas que el torneo impondra de manera
+                    interna?
                 </div>
 
                 <div class="group-container">
@@ -122,7 +130,8 @@
                     <RadioButton v-model="radioTiempoJuego" inputId="mas" name="mas" value="Más de lo que me gustaria"
                         :invalid="!tiempoJuegoValido" :disabled="isDisabled" />
                 </div>
-                <small :class="{ 'error-message': true, 'hidden': tiempoJuegoValido }" class="error-message">Este campo es
+                <small :class="{ 'error-message': true, 'hidden': tiempoJuegoValido }" class="error-message">Este campo
+                    es
                     requerido.</small>
             </div>
 
@@ -314,6 +323,15 @@ const validarFormulario = () => {
 }
 
 const submitForm = async () => {
+
+    const today = new Date();
+    const day = String(today.getDate()).padStart(2, '0'); // Día (2 dígitos)
+    const month = String(today.getMonth() + 1).padStart(2, '0'); // Mes (0-indexado, +1 para corregir)
+    const year = today.getFullYear(); // Año completo
+
+    const formattedDate = `${day}/${month}/${year}`;
+
+
     const inscripcion = {
         NickName: nickName.value,
         Plataforma: radioPlataforma.value,
@@ -326,11 +344,12 @@ const submitForm = async () => {
         TiempoJuego: radioTiempoJuego.value,
         TieneVR: radioVR.value,
         Comunicacion: radioComu.value,
-        Competitov: radioCompe.value,
+        Competitivo: radioCompe.value,
         Toxico: radioToxi.value,
         Capitan: radioCapi.value,
         Twitter: twitter.value,
-        Canal: canal.value
+        Canal: canal.value,
+        Fecha: formattedDate
     };
 
     let inscripciones = ref();
@@ -386,7 +405,7 @@ const limpiarInputs = () => {
     radioTiempoEvento.value = '';
     radioTiempoMarketing.value = '';
     radioCompromiso.value =
-    radioReglas.value = '';
+        radioReglas.value = '';
     radioTiempoJuego.value = '';
     radioVR.value = '';
     radioComu.value = '';

@@ -5,9 +5,9 @@ import emailjs from '@emailjs/browser';
 export async function sendEmail(name, email, subject, text) {
     // Configura tu servicio EmailJS
 
-    const serviceId = 'service_r4o8hkb';
-    const templateId = 'template_ytrgfc3';
-    const userID = 'h3jC_c5mVHznvIZYS';
+    const serviceId = import.meta.env.VITE_SERVICE_ID;
+    const templateId = import.meta.env.VITE_TEMPLATE_ID;;
+    const userID = import.meta.env.VITE_USER_ID;
 
     try {
         

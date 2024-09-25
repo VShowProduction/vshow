@@ -47,6 +47,18 @@
                 font-weight: 500;
                 margin-bottom: 3px;
             }
+
+            .error-message {
+                color: red;
+                font-size: 12px;
+                height: 20px; /* Reservar un espacio fijo para el mensaje */
+                visibility: visible; /* Mostrar el mensaje cuando esté presente */
+                margin-top: 3px;
+              }
+              
+              .error-message.hidden {
+                visibility: hidden; /* Ocultar el mensaje sin afectar el diseño */
+              }
         }
 
         button {
