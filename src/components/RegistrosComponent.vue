@@ -42,7 +42,7 @@ import InputText from 'primevue/inputtext';
 import { query, orderBy, getDocs, collection, onSnapshot  } from 'firebase/firestore'
 import { db } from '../assets/js/firebaseconect'
 import { FilterMatchMode } from '@primevue/core/api';
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 
 const inscripciones = ref();
 const isLoading = ref(true);
@@ -71,6 +71,10 @@ onMounted( async () => {
         console.error(e);
     }
    
+})
+
+onUnmounted(() => {
+    unsubscribe();
 })
 
 // optional
