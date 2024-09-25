@@ -51,7 +51,7 @@
             </div>
 
             <div class="form-input">
-                <div class="info">¿Dispones del tiempo necesariop para participar del evento? (4/5 días de duracion)
+                <div class="info">¿Dispones del tiempo necesario para participar del evento? (4/5 días de duracion)
                 </div>
                 <div class="group-container">
                     <label for="si">Si</label>
@@ -67,7 +67,7 @@
             </div>
 
             <div class="form-input">
-                <div class="info">¿Dispones del tiempo para colaboar con toda la producción del marketing del evento?
+                <div class="info">¿Dispones del tiempo para colaborar con toda la producción del marketing del evento?
                 </div>
                 <div class="group-container">
                     <label for="si">Si</label>
@@ -136,7 +136,7 @@
             </div>
 
             <div class="form-input">
-                <div class="info">¿Dispones de un dispositov VR? (Index, Occulus, HTC, etc...)</div>
+                <div class="info">¿Dispones de un dispositov VR? (Index, Oculus, HTC, etc...)</div>
                 <div class="group-container">
                     <label for="si">Si</label>
                     <RadioButton v-model="radioVR" inputId="si" name="si" value="Si" :invalid="!vrValido"
