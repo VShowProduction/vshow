@@ -2,7 +2,7 @@
   <Carousel></Carousel>
   <Information></Information>
   <Nosotros></Nosotros>
-  <!-- <Aviso></Aviso> -->
+  <Aviso></Aviso>
 </template>
 
 <script setup>
