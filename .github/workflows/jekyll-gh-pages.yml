@@ -47,6 +47,9 @@ jobs:
           VITE_MESSAGINGSENDERID: ${{ secrets.VITE_MESSAGINGSENDERID }}
           VITE_APPID: ${{ secrets.VITE_APPID }}
           VITE_MEASUREMENTID: ${{ secrets.VITE_MEASUREMENTID }}
+          VITE_SERVICE_ID: ${{ secrets.VITE_SERVICE_ID }}
+          VITE_TEMPLATE_ID: ${{ secrets.VITE_TEMPLATE_ID }}
+          VITE_USER_ID: ${{ secrets.VITE_USER_ID }}
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
