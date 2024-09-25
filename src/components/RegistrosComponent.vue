@@ -39,7 +39,7 @@ import Column from 'primevue/column';
 import ColumnGroup from 'primevue/columngroup';   // optional
 import Row from 'primevue/row';
 import InputText from 'primevue/inputtext'; 
-import { doc, setDoc, getDocs, collection } from 'firebase/firestore'
+import { query, orderBy, getDocs, collection, onSnapshot  } from 'firebase/firestore'
 import { db } from '../assets/js/firebaseconect'
 import { FilterMatchMode } from '@primevue/core/api';
 import { ref, onMounted } from 'vue';
@@ -49,18 +49,28 @@ const isLoading = ref(true);
 
 const filters = ref({
     global: { value: null, matchMode: FilterMatchMode.CONTAINS },
-    name: { value: null, matchMode: FilterMatchMode.STARTS_WITH },
-    'country.name': { value: null, matchMode: FilterMatchMode.STARTS_WITH },
-    representative: { value: null, matchMode: FilterMatchMode.IN },
-    status: { value: null, matchMode: FilterMatchMode.EQUALS },
-    verified: { value: null, matchMode: FilterMatchMode.EQUALS }
 });
 
 onMounted( async () => {
-    const data = await getDocs(collection(db, "inscripciones"));
-        inscripciones.value = data.docs
-            .map(doc => ({ ...doc.data() }))
-            isLoading.value=false;
+    try {
+        const q = query(
+            collection(db, "inscripciones"),
+            orderBy("Id", "asc") // Puedes cambiar "asc" a "desc" si quieres en orden descendente
+        );
+
+        const unsubscribe = onSnapshot(q, (snapshot) => {
+            // Actualizar inscripciones con los datos en tiempo real
+            inscripciones.value = snapshot.docs.map(doc => ({
+                id: doc.id, // ID del documento
+                ...doc.data() // Datos del documento
+            }));
+        });
+
+        isLoading.value = false;
+    }catch (e){
+        console.error(e);
+    }
+   
 })
 
 // optional

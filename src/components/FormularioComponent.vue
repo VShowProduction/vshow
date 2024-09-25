@@ -333,6 +333,7 @@ const submitForm = async () => {
 
 
     const inscripcion = {
+        Id: '',
         NickName: nickName.value,
         Plataforma: radioPlataforma.value,
         Pais: paisSeleccionado.value,
@@ -366,6 +367,8 @@ const submitForm = async () => {
         inscripciones.value = data.docs
             .map(doc => ({ ...doc.data() }))
         const total = inscripciones.value.length + 1;
+
+        inscripcion.Id = total;
 
         await setDoc(doc(db, "inscripciones", total.toString()), inscripcion)
 
