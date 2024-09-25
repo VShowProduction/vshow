@@ -418,7 +418,7 @@ const limpiarInputs = () => {
 
 onMounted(() => {
 
-    axios.get('https://restcountries.com/v3.1/all')
+    axios.get('https://restcountries.com/v3.1/all?fields=name')
         .then(response => {
             response.data.forEach((e, index) => {
                 paises.value[index] = {
