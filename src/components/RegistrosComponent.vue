@@ -64,18 +64,24 @@ onMounted( async () => {
                 id: doc.id, // ID del documento
                 ...doc.data() // Datos del documento
             }));
+
+            console.log(inscripciones.value)
+
         });
 
         isLoading.value = false;
+
+
+        onUnmounted(() => {
+            unsubscribe();
+        })
     }catch (e){
         console.error(e);
     }
    
 })
 
-onUnmounted(() => {
-    unsubscribe();
-})
+
 
 // optional
 </script>
