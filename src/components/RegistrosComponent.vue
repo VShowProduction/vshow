@@ -27,6 +27,7 @@
     <Column field="TiempoMarketing" header="Tiempo de Marketing" class="yes-no" sortable style="width: 25%"></Column>
     <Column field="TieneVR" header="Tiene VR" class="yes-no" sortable style="width: 25%"></Column>
     <Column field="Toxico" header="Tóxico" class="yes-no" sortable style="width: 25%"></Column>
+    <Column field="Suplente" header="Suplente" class="yes-no" sortable style="width: 25%"></Column>
     <Column field="Twitter" header="Twitter" sortable style="width: 25%"></Column>
 </DataTable>
 
