@@ -10,7 +10,7 @@
         <InputText v-model="filters['global'].value" placeholder="Palabra clave" />
     </div>
 </template>
-
+    <Column field="Id" header="Id" sortable style="width: 25%"></Column>
     <Column field="Fecha" header="Fecha" sortable style="width: 25%"></Column>
     <Column field="NickName" header="NickName" sortable style="width: 25%"></Column>
     <Column field="Canal" header="Canal" sortable style="width: 25%"></Column>
