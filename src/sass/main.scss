@@ -11,6 +11,14 @@ body {
     background-image: url('/FONDO.png');
 }
 
+a {
+  color: $main;
+
+  &:visited {
+    color: $main;
+  }
+}
+
 #app {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

@@ -17,8 +17,22 @@
 
                     </p>
 
-                    <div class="twitter"><a :href="w.tw" target="_blank"><font-awesome-icon
+                    <div style="display: flex; justify-content: center;">
+                        <div class="twitter"><a :href="w.tw" target="_blank"><font-awesome-icon
                                 :icon="['fab', 'twitter']" /></a></div>
+                                
+                    <div v-if="w.tw2" class="twitter"><a :href="w.tw2" target="_blank"><font-awesome-icon
+                                :icon="['fab', 'twitter']" /></a></div>
+
+                                
+                    <div v-if="w.tw3" class="twitter"><a :href="w.tw3" target="_blank"><font-awesome-icon
+                                :icon="['fab', 'twitter']" /></a></div>
+
+                                
+                    <div v-if="w.tw4" class="twitter"><a :href="w.tw4" target="_blank"><font-awesome-icon
+                                :icon="['fab', 'twitter']" /></a></div>
+                    </div>
+
 
                 </div>
 
@@ -71,7 +85,7 @@ const we = ref(
         },
 
         {
-            titulo: 'DAZER',
+            titulo: 'DAZER0',
             img: '/vshow/DAZER.png',
             texto: 'Dazer0 siempre ha estado relacionado con la comunidad inglesa e hispana en la producción de eventos de música electrónica en VRCHAT. Como miembro del conocido Club LSPOT, su conocimiento y cercanía al mundo Vtuber aportan grandes opciones al equipo.',
             texto2: 'Desempeña funciones como Broadcaster Producer, trabajando en gráficos y overlays en tiempo real, así como en la proyección de video y música en entornos 3D.',
@@ -85,7 +99,19 @@ const we = ref(
             texto: 'Lyroy es uno de los principales motores del funcionamiento de los eventos. Cuenta con habilidades de programación, pero sobre todo de liderazgo, lo que le permite organizar y ejecutar acciones en equipo durante las producciones.',
             texto2: 'Actualmente, se desempeña principalmente como director de cámaras, organizando y decidiendo qué perspectivas se mostrarán durante las emisiones en directo.',
             texto3: 'Sin embargo, su versatilidad le permite cubrir prácticamente cualquier función dentro del equipo.',
-            tw: 'https://x.com/Lyroy34'
+            tw: 'https://x.com/Lyroy34',
+        },
+
+        
+        {
+            titulo: 'CERREBASS | AÚRA | BRANDREK | KITO',
+            img: '/vshow/TEAM.png',
+            texto: 'Este es el equipo de VSHOW encargado de darle vida a los eventos en directo, así como de apoyar grabaciones y otras funciones.',
+            texto2: 'Sus principales funciones dentro del equipo son el uso de cámaras; sin embargo, el equipo es lo suficientemente versátil para ejecutar diversas tareas, como el control de iluminación, la música, la organización e incluso actuar como actores de cuerpo completo.',
+            texto3: 'Sin duda, son el motor de cada evento, sobre todo para las transmisiones en vivo.',
+            tw: 'https://x.com/CerrebassVT',
+            tw3: 'https://x.com/BrandrekM',
+            tw4: 'https://x.com/Oxi_kt',
         },
         
 
