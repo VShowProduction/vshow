@@ -30,8 +30,8 @@
 
             <div class="form-input">
                 <div class="info">País</div>
-                <Select v-model="paisSeleccionado" :options="paises" optionLabel="name"
-                    placeholder="Seleccione un país" :invalid="!paisValido" :disabled="isDisabled"></Select>
+                <Select v-model="paisSeleccionado" :options="paises" optionLabel="name" placeholder="Seleccione un país"
+                    :invalid="!paisValido" :disabled="isDisabled"></Select>
                 <small :class="{ 'error-message': true, 'hidden': paisValido }" class="error-message">Este campo es
                     requerido.</small>
             </div>

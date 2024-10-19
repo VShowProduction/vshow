@@ -113,6 +113,15 @@ const we = ref(
             tw3: 'https://x.com/BrandrekM',
             tw4: 'https://x.com/Oxi_kt',
         },
+
+        {
+            titulo: 'VOMORI',
+            img: '/vshow/Vomo.png',
+            texto: 'Vomori es una modeladora 3D que colabora con Vshow, donde se encarga de diseñar y modelar elementos tridimensionales para los eventos.',
+            texto2: 'Trabaja en estrecha colaboración con el equipo creativo y utiliza su destreza en software de modelado para asegurar que cada evento sea único y memorable.',
+            texto3: 'Su pasión por el diseño la convierte en una pieza clave en el proceso.',
+            tw: 'https://x.com/VomoriHiko',
+        },
         
 
     ]
