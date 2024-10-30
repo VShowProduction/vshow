@@ -1,6 +1,6 @@
 <template>
   <div v-if="showModal" class="modal-overlay">
-    <div class="modal-content">
+    <div class="modal-content" :class="{'modal-text': isTextOnly}">
       <!-- Header del modal cuando no es solo texto -->
       <div class="modal-header" v-if="!isTextOnly">
         <span class="modal-icon">

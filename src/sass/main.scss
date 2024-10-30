@@ -512,6 +512,10 @@ a {
   color: $black;
 }
 
+.modal-text {
+  max-width: 800px;
+}
+
 .modal-header {
   display: flex;
   align-items: center;
