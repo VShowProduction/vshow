@@ -30,8 +30,8 @@
 
             <div class="form-input">
                 <div class="info">País</div>
-                <Select v-model="paisSeleccionado" :options="paises" optionLabel="name"
-                    placeholder="Seleccione un país" :invalid="!paisValido" :disabled="isDisabled"></Select>
+                <Select v-model="paisSeleccionado" :options="paises" optionLabel="name" placeholder="Seleccione un país"
+                    :invalid="!paisValido" :disabled="isDisabled"></Select>
                 <small :class="{ 'error-message': true, 'hidden': paisValido }" class="error-message">Este campo es
                     requerido.</small>
             </div>
@@ -206,6 +206,20 @@
             </div>
 
             <div class="form-input">
+                <div class="info">¿Estarias dispuesto a ser suplente para tu equipo?</div>
+                <div class="group-container">
+                    <label for="si">Si</label>
+                    <RadioButton v-model="suplente" inputId="si" name="si" value="Si" :invalid="!suplenteValido"
+                        :disabled="isDisabled" />
+                    <label for="no">No</label>
+                    <RadioButton v-model="suplente" inputId="no" name="no" value="No" :invalid="!suplenteValido"
+                        :disabled="isDisabled" />
+                </div>
+                <small :class="{ 'error-message': true, 'hidden': capiValido }" class="error-message">Este campo es
+                    requerido.</small>
+            </div>
+
+            <div class="form-input">
                 <div class="info">Twitter:</div>
                 <InputText v-model="twitter" :invalid="!twitterValido" :disabled="isDisabled"></InputText>
                 <small :class="{ 'error-message': true, 'hidden': twitterValido }" class="error-message">Este campo es
@@ -266,6 +280,7 @@ const radioToxi = ref('');
 const radioCapi = ref('')
 const twitter = ref('');
 const canal = ref('');
+const suplente = ref('');
 
 const nickValido = ref(true);
 const plataformaValido = ref(true);
@@ -283,6 +298,7 @@ const toxiValido = ref(true);
 const capiValido = ref(true)
 const twitterValido = ref(true);
 const canalValido = ref(true);
+const suplenteValido = ref(true)
 
 const isDisabled = ref(false)
 
@@ -303,12 +319,13 @@ const validarFormulario = () => {
     capiValido.value = radioCapi.value !== '';
     twitterValido.value = twitter.value !== '';
     canalValido.value = canal.value !== '';
+    suplenteValido.value = suplente.value !== '';
 
     const formEsValido = nickValido.value && plataformaValido.value && paisValido.value && vtValido.value &&
         tiempoEventoValido.value && tiempoMarketingValido.value && compromisoValido.value &&
         tiempoJuegoValido.value && reglasValido.value && vrValido.value && comuValido.value &&
         compeValido.value && toxiValido.value && capiValido.value && twitterValido.value &&
-        canalValido.value;
+        canalValido.value && suplenteValido.value;
 
     if (formEsValido) {
 
@@ -350,6 +367,7 @@ const submitForm = async () => {
         Capitan: radioCapi.value,
         Twitter: twitter.value,
         Canal: canal.value,
+        Suplente: suplente.value,
         Fecha: formattedDate
     };
 
