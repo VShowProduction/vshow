@@ -16,6 +16,10 @@
         </div>
 
         <div class="text-footer">
+            <h5>¿Quieres trabajar con nostros? Haz click <RouterLink to="/Unete">aqui</RouterLink></h5>
+        </div>
+
+        <div class="text-footer">
             <h4>© {{ Year }} VSHOW PRODUCTION | TODOS LOS DERECHOS RESERVADOS</h4>
         </div>
     </div>

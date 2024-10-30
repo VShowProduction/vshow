@@ -9,6 +9,8 @@ import FormularioView from '../views/FormularioView.vue'
 import RegistrosView from '../views/RegistrosView.vue'
 import LoginView from '../views/LoginView.vue'
 import { useUserStore } from '../store/userStore'
+import WorkingView from '../views/WorkingView.vue'
+import SolicitudesView from '../views/SolicitudesView.vue'
 
 
 const routes = [
@@ -58,7 +60,18 @@ const routes = [
     name: 'Registros',
     component: RegistrosView,
     meta: { requiresAuth: true }  // Ruta protegida
-  }
+  },
+  {
+    path: '/Unete',
+    name: 'unete',
+    component: WorkingView, 
+  },
+  {
+    path: '/Solicitudes',
+    name: 'Solicitudes',
+    component: SolicitudesView,
+    meta: { requiresAuth: true }  // Ruta protegida
+  },
 ]
 
 const router = createRouter({

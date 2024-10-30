@@ -1,5 +1,6 @@
 <template>
     <div class="table-container">
+        <Button @click="irSoli">Ir a solicitidues</Button>
  <DataTable v-model:filters="filters" :value="inscripciones" 
  stripedRows paginator :rows="10" :rowsPerPageOptions="[10, 20, 50, 100]"  
  tableStyle="min-width: 50rem"
@@ -38,11 +39,15 @@ import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
 import ColumnGroup from 'primevue/columngroup';   // optional
 import Row from 'primevue/row';
+import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'; 
 import { query, orderBy, getDocs, collection, onSnapshot  } from 'firebase/firestore'
 import { db } from '../assets/js/firebaseconect'
 import { FilterMatchMode } from '@primevue/core/api';
 import { ref, onMounted, onUnmounted } from 'vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 
 const inscripciones = ref();
 const isLoading = ref(true);
@@ -81,7 +86,9 @@ onMounted( async () => {
    
 })
 
-
+const irSoli = () => {
+    router.push('/Solicitudes')
+}
 
 // optional
 </script>

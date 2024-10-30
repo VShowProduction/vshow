@@ -11,6 +11,10 @@ body {
     background-image: url('/FONDO.png');
 }
 
+a {
+  color: $main;
+ }
+
 #app {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -370,6 +374,8 @@ body {
   }
 }
 
+
+
 @media screen and (max-width: 1300px) {
 
   .container {
@@ -526,6 +532,7 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-top: 5px;
 }
 
 .modal-button:hover {
