@@ -45,11 +45,11 @@ const routes = [
     name: 'services',
     component: ServicesView, 
   },
-  {
-    path: '/FormularioWorldCup',
-    name: 'formulario',
-    component: FormularioView, 
-  },
+  // {
+  //   path: '/FormularioWorldCup',
+  //   name: 'formulario',
+  //   component: FormularioView, 
+  // },
   {
     path: '/login',
     name: 'Login',
@@ -71,6 +71,10 @@ const routes = [
     name: 'Solicitudes',
     component: SolicitudesView,
     meta: { requiresAuth: true }  // Ruta protegida
+  },
+  {
+    path: '/:pathMatch(.*)*',  // Ruta comodín para redirigir a la página de inicio
+    redirect: { name: 'home' }
   },
 ]
 
