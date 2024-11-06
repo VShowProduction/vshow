@@ -72,7 +72,7 @@ const we = ref(
             texto: 'Gabo es editor y diseñador digital con experiencia en la creación de gráficos para eventos, marcas y creadores de contenido.',
             texto2: 'Ha trabajado para varios creadores, como AYAKA ZAPHYR, CHAINAVT y TECNOANIME, destacándose por la gran calidad de sus trabajos, tanto en edición de video como en imágenes.',
             texto3: 'Es el diseñador de los logotipos oficiales de VSHOW y de algunos de sus eventos, como VT WORLD CUP 2024 y VT LEAGUE. Además, es responsable de crear gran parte de la línea gráfica y la publicidad de estos eventos.',
-            tw: 'https://x.com/HiGaboo_'
+            tw: 'https://x.com/gaboscut'
         },
 
         {
