@@ -11,7 +11,7 @@ import LoginView from '../views/LoginView.vue'
 import { useUserStore } from '../store/userStore'
 import WorkingView from '../views/WorkingView.vue'
 import SolicitudesView from '../views/SolicitudesView.vue'
-
+import AwardView from '../views/AwardView.vue'
 
 const routes = [
   {
