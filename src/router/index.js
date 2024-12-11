@@ -66,12 +66,12 @@ const routes = [
     name: 'unete',
     component: WorkingView, 
   },
-  {
-    path: '/Solicitudes',
-    name: 'Solicitudes',
-    component: SolicitudesView,
-    meta: { requiresAuth: true }  // Ruta protegida
-  },
+  // {
+  //   path: '/Solicitudes',
+  //   name: 'Solicitudes',
+  //   component: SolicitudesView,
+  //   meta: { requiresAuth: true }  // Ruta protegida
+  // },
   {
     path: '/:pathMatch(.*)*',  // Ruta comodín para redirigir a la página de inicio
     redirect: { name: 'home' }
