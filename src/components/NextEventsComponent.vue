@@ -1,11 +1,5 @@
 <template>
     <div class="imagen-container">
-        <a href="https://x.com/VshowProduction/status/1837229022146670769" target="_blank"><div id="gala" class="img-ev"></div></a>
-    </div>
-    <div class="imagen-container">
-        <a href="https://x.com/VshowProduction/status/1858651753819824131" target="_blank"><div id="world-cup" class="img-ev"></div></a>
-    </div>
-    <div class="imagen-container">
         <a><div id="sh" class="img-ev"></div></a>
     </div>
     <div class="imagen-container">
