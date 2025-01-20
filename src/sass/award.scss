@@ -24,49 +24,6 @@
 }
 
 
-.container-award {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-image: url('/Award/fondo-votaciones.png');
-    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
-    max-width: 1300px;
-    height: auto;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    padding: 30px;
-    text-align: center; /* Centrar contenido en bloque */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    color: #F1D8A8;
-    font-family: 'PT Serif', serif;
-
-    .twitch-button {
-        background-color: #9147ff;
-        color: white;
-        border-radius: 0.4em;
-        text-decoration: none;
-        border: none;
-        width: 200px;
-        height: 50px;
-        font-size: 18px; /* Tamaño del texto */
-        font-weight: bold; /* Texto más grueso (opcional) */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        margin: 20px auto; /* Centra el botón si text-align no funciona */
-
-
-        &:hover {
-            background-color: #7838d7;
-        }
-    }
-
-    img {
-        max-width: 500px; /* Asegura que la imagen no exceda el ancho del contenedor */
-        height: auto; /* Mantiene la proporción original */
-    }
-}
 
 .question-container {
     animation: fade-in 0.5s ease-in-out;
@@ -177,6 +134,34 @@
       button:hover {
         background-color: #c4a81b;
       }
+
+      
+    .twitch-button {
+        background-color: #9147ff;
+        color: white;
+        border-radius: 0.4em;
+        text-decoration: none;
+        border: none;
+        width: 200px;
+        height: 50px;
+        font-size: 18px; /* Tamaño del texto */
+        font-weight: bold; /* Texto más grueso (opcional) */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin: 20px auto; /* Centra el botón si text-align no funciona */
+
+
+        &:hover {
+            background-color: #7838d7;
+        }
+    }
+
+    img {
+        max-width: 500px; /* Asegura que la imagen no exceda el ancho del contenedor */
+        height: auto; /* Mantiene la proporción original */
+    }
   }
   
   @media screen and (max-width: 1300px) {
@@ -200,13 +185,6 @@
   }
 
   @media screen and (max-width: 768px) {
-
-    .container-award {
-        img {
-            max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
-        }
-    }
-
     .question-container {
         
         .answers-container { 
@@ -218,6 +196,10 @@
                 justify-content: center;
                 margin: 0 auto;
             }
+        }
+
+        img {
+            max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
         }
     }
   }
