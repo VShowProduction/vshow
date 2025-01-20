@@ -95,7 +95,7 @@ const questions = [
         { name: 'Lunaria Ayaren (Redebut 3D)', image: '/Award/LunariaAyaren.png' },
         { name: 'Mai noboshi', image: '/Award/MaiNoboshi.png' },
         { name: 'JazminVT', image: '/Award/JazminVT.png' },
-        { name: 'KuroAmyVT', image: '/Award/KuroAmyVT.png' }
+        { name: 'KuroAmyVT', image: '/Award/KuroAmyVT.png' },
         { name: 'Rakkun', image: '/Award/Rakkun.png' }
       ]
     },
