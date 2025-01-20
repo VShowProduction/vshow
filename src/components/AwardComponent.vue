@@ -23,7 +23,7 @@
       </div>
     </div>
 
-    <div v-else-if="isLoading">
+    <div v-else>
       <div class="question-container" v-if="currentQuestion" :key="currentIndex">
         <div class="header-award">
           <img src="/Award/viti-flat.png" height="100">
@@ -43,11 +43,8 @@
           <button @click="submitAnswers" v-else :disabled="!userAnswers[currentIndex]">Finalizar</button>
         </div>
 
-
       </div>
-
-
-    </div>
+      </div>
   </transition>
 
 </template>
