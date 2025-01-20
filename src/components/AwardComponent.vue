@@ -6,7 +6,7 @@
             <img src="/Award/premiosVITI.png" height="300x">
         </div>
         <div v-if="!finish">
-            <h1>Bienvenido a la votación por los ganadores de los premios VITI</h1>
+            <h1>Bienvenido a la votación por los ganadores de los Premios VITI</h1>
             <h2>Para votar primero se debera loguear en twitch</h2>
         </div>
         <div v-else>
@@ -53,13 +53,14 @@ import { onMounted, ref, computed } from 'vue';
 import quest from '../assets/js/questions';
 import { doc, setDoc, getDocs, collection } from 'firebase/firestore'
 import { db } from '../assets/js/firebaseconect'
+import exp from '../assets/js/twitch';
 
 const accessToken = ref();
 const isToken = ref(true);
 
  const loginTwitch = (() => {
-    const clientId = import.meta.env.VITE_TWITCH_KEY;
-    const redirectUri =  import.meta.env.VITE_URL + '/vshow/#/VitiAwards';
+    const clientId = exp.clientId;
+    const redirectUri =  exp.redirectUri;
     const responseType = 'token';
     const scopes = 'user:read:email'; // Ajusta los scopes según tus necesidades
 
