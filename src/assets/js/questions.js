@@ -158,7 +158,8 @@ const questions = [
         { name: 'Meica05', image: '/Award/Meica05.png' },
         { name: 'Rakkun', image: '/Award/Rakkun.png' },
         { name: 'Irelyth', image: '/Award/Irelyth.png' },
-        { name: 'ShuraHiwa', image: '/Award/ShuraHiwa.png' }
+        { name: 'ShuraHiwa', image: '/Award/ShuraHiwa.png' },
+        { name: 'Zilverk', image: '/Award/Zilverk.png' }
       ]
     },
     {
