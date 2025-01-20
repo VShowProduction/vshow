@@ -11,6 +11,8 @@ import './sass/nosotros.scss'
 import './sass/form.scss'
 import './sass/registros.scss'
 import './sass/aviso.scss'
+import './sass/award.scss'
+
 
 
 import 'animate.css';
@@ -28,7 +30,7 @@ import { createPinia } from 'pinia'
 
 const pinia = createPinia();
 
-library.add (faSpinner, faTwitch, faTwitter, faUserSecret, faYoutube, faArrowUp, faLongArrowAltUp, faCheckCircle, faExclamationCircle)
+library.add (faSpinner, faTwitch, faTwitter, faUserSecret, faYoutube, faArrowUp, faLongArrowAltUp, faCheckCircle, faExclamationCircle, faTwitch)
 
 const app = createApp(App);
 app.use(pinia);

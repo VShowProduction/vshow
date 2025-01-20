@@ -76,6 +76,11 @@ const routes = [
     path: '/:pathMatch(.*)*',  // Ruta comodín para redirigir a la página de inicio
     redirect: { name: 'home' }
   },
+  {
+    path: '/VitiAwards',
+    name: 'VitiAwards',
+    component: AwardView,
+  }
 ]
 
 const router = createRouter({
