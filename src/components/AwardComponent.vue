@@ -51,13 +51,13 @@
 <script setup lang="ts">
 import { onMounted, ref, computed } from 'vue';
 import quest from '../assets/js/questions';
-import { doc, setDoc, getDocs, collection } from 'firebase/firestore'
+import { doc, setDoc, getDocs, collection, query, where } from 'firebase/firestore'
 import { db } from '../assets/js/firebaseconect'
 import exp from '../assets/js/twitch';
 
 const accessToken = ref();
 const isToken = ref(true);
-
+const nothing = ref(false);
  const loginTwitch = (() => {
     const clientId = exp.clientId;
     const redirectUri =  exp.redirectUri;
@@ -87,12 +87,13 @@ const userData = ref({});
         if (tokenMatch && tokenMatch[1]) {
             accessToken.value = tokenMatch[1];
             // window.history.replaceState(null, document.title, window.location.pathname + window.location.search);
+            handleFormAccess(accessToken.value)
 
             getUserData(accessToken.value).then((user) => {
               userData.value.name = user.display_name;
               userData.value.id = user.id
             });
-            isToken.value = false;
+
         } else {
             console.log('Access token not found in hash');
         }
@@ -111,17 +112,35 @@ const userData = ref({});
 
 }
 
-async function handleFormAccess(accessToken) {
-    const user = await getUserData(accessToken);
+ async function handleFormAccess(accessToken) {
+  const user = await getUserData(accessToken);
     const userId = user.id;
 
-    // Aquí puedes verificar si el usuario ya está en la base de datos
-    // const alreadyFilled = await checkIfUserFilledForm(userId);
+    // Crear una consulta para verificar si el userId ya existe
+    const q = query(
+        collection(db, "vitiAwards"),
+        where("user.id", "==", userId)
+    );
 
-    if (alreadyFilled) {
-        alert("Ya has completado este formulario.");
-    } else {
-        // Mostrar formulario
+    try {
+
+
+
+        const querySnapshot =  getDocs(q);
+
+        if (!querySnapshot.empty) {
+            // El userId ya existe en la base de datos
+            finish.value = true;
+            isToken.value = true;
+        } else {
+            // El userId no existe, puedes mostrar el formulario
+            isToken.value = false;
+        }
+    } catch (error) {
+        console.error("Error al verificar si el usuario ya completó el formulario:", error);
+    }
+    finally {
+
     }
 }
 
