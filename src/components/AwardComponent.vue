@@ -59,6 +59,10 @@
       </div>
   </transition>
 
+
+  <Modal :showModal="showModal" :isError="errorModal" :message="textoModal" :isLoading="false"
+        @cerrarModal="cerrarModal" />
+
 </template>
 
 <script setup lang="ts">
@@ -67,11 +71,22 @@ import quest from '../assets/js/questions';
 import { doc, setDoc, getDocs, collection, query, where } from 'firebase/firestore'
 import { db } from '../assets/js/firebaseconect'
 import exp from '../assets/js/twitch';
+import { useRouter } from 'vue-router';
+
+
+import Modal from './auxiliar/Modal.vue';
+
 
 const accessToken = ref();
 const isToken = ref(true);
 const isLoading = ref(true);
 const isDisabled = ref(false);
+const route = useRouter();
+
+
+const errorModal = ref();
+const textoModal = ref('EMAIL ENVIADO CORRECTAMENTE');
+const showModal = ref(false);
 
 const loginTwitch = (() => {
   const clientId = exp.clientId;
@@ -220,16 +235,14 @@ const submitAnswers = async () => {
 
   try {
 
-
-
-    const data = await getDocs(collection(db, "vitiAwards"));
-    resultado.value = data.docs
-      .map(doc => ({ ...doc.data() }))
-    const total = resultado.value.length + 1;
+    // const data = await getDocs(collection(db, "vitiAwards"));
+    // resultado.value = data.docs
+    //   .map(doc => ({ ...doc.data() }))
+    // const total = resultado.value.length + 1;
 
 
     // Enviar las respuestas a la base de datos
-    await setDoc(doc(db, "vitiAwards", total.toString()), userResponse);
+    await setDoc(doc(db, "vitiAwards", userResponse.user.id), userResponse);
 
     // Aquí se asume que el ID del usuario es el `accessToken`, pero puedes usar otro campo de ID si lo prefieres.
     // Puedes usar `accessToken.value` para crear un nombre único del documento en la colección "respuestas".
@@ -241,6 +254,11 @@ const submitAnswers = async () => {
 
   } catch (e) {
     console.error(e);
+
+    
+    textoModal.value = "Hubo un error al enviar el formulario. Inténtalo nuevamente más tarde.";
+        errorModal.value = true;
+        showModal.value = true;
   } finally {
     isLoading.value = true;
     isDisabled.value = false;
@@ -270,4 +288,9 @@ const revokeToken = async (accessToken) => {
     console.error("Error en la solicitud de revocación:", error);
   }
 };
+
+const cerrarModal = () => {
+    showModal.value = false
+    route.push('/')
+}
 </script>
