@@ -7,7 +7,7 @@
       </div>
       <div v-if="!finish && isLoading">
         <h1>Bienvenido a la votación por los ganadores de los Premios VITI</h1>
-        <h2>Para votar primero se debera loguear en twitch</h2>
+        <h4 style="font-style: italic;">*Para votar primero se debera loguear en twitch</h4>
       </div>
       <div v-else-if="isLoading">
         <h1>GRACIAS POR VOTAR, SU RESPUESTA HA SIDO ENVIADA EXITOSAMENTE</h1>
@@ -30,17 +30,29 @@
           <h2>{{ currentQuestion.text }}</h2>
         </div>
         <div class="answers-container">
-          <div v-for="(answer, index) in currentQuestion.answers" :key="index"
+          <div v-for="(answer, index) in currentQuestion.answers" :key="index">
+            <div 
             @click="selectAnswer(answer.name, currentQuestion.text)"
             :class="['answer', { selected: userAnswers[currentIndex] && userAnswers[currentIndex].respuesta === answer.name }]"
             :style="{ backgroundImage: `url(${answer.image})` }">
             <p>{{ answer.name }}</p>
           </div>
+          <div class="link-container">
+            <a target="_blank" v-if="currentIndex == 18" :href="answer.link">Link del Clip</a>
+          </div>
+
+          </div>
+         
         </div>
         <div class="button-container">
           <button @click="backQuestion" v-if="currentIndex !== 0">Atras</button>
           <button @click="nextQuestion" v-if="!isLastQuestion" :disabled="!userAnswers[currentIndex]">Siguiente</button>
-          <button @click="submitAnswers" v-else :disabled="!userAnswers[currentIndex]">Finalizar</button>
+          <button class="final-button" @click="submitAnswers" v-else :disabled="!userAnswers[currentIndex] || isDisabled"> 
+            <span>Finalizar</span>
+          </button>
+        </div>
+        <div>
+          <font-awesome-icon v-if="!isLoading" :icon="['fas', 'spinner']" spin class="spinner" />
         </div>
 
       </div>
@@ -59,6 +71,8 @@ import exp from '../assets/js/twitch';
 const accessToken = ref();
 const isToken = ref(true);
 const isLoading = ref(true);
+const isDisabled = ref(false);
+
 const loginTwitch = (() => {
   const clientId = exp.clientId;
   const redirectUri = exp.redirectUri;
@@ -126,7 +140,6 @@ async function handleFormAccess(accessToken) {
   try {
 
     isLoading.value = false;
-
     const querySnapshot = await getDocs(q);
 
     console.log(querySnapshot)
@@ -188,6 +201,9 @@ const submitAnswers = async () => {
   const month = String(today.getMonth() + 1).padStart(2, '0'); // Mes (0-indexado, +1 para corregir)
   const year = today.getFullYear(); // Año completo
 
+  isLoading.value = false;
+  isDisabled.value = true;
+
   const formattedDate = `${day}/${month}/${year}`;
 
   // Suponiendo que las respuestas del usuario están en `userAnswers`
@@ -202,7 +218,7 @@ const submitAnswers = async () => {
 
   try {
 
-    isLoading.value = false;
+
 
     const data = await getDocs(collection(db, "vitiAwards"));
     resultado.value = data.docs
@@ -225,6 +241,7 @@ const submitAnswers = async () => {
     console.error(e);
   } finally {
     isLoading.value = true;
+    isDisabled.value = false;
   }
 };
 

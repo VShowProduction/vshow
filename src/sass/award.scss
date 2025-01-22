@@ -78,6 +78,29 @@
         img {
             max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
         }
+
+        .link-container {
+
+          margin-top: 30px;
+
+          a {
+            margin-top: auto;  
+            padding: 10px;
+            /* Empuja el enlace hacia la parte inferior de la tarjeta */
+            text-decoration: none;  /* Elimina el subrayado predeterminado */
+            color: #f4cb00;         /* Color del texto */
+            font-size: 14px;        /* Tamaño del texto */
+            font-weight: bold;      /* Hace que el texto sea más llamativo */
+            display: block;         /* Asegura que ocupe toda la línea */
+            margin-bottom: 10px;  
+            border-radius: 5px;
+
+            &:hover {
+              text-decoration: underline; /* Subrayado al pasar el cursor */
+              color: #d8a600;   
+            }
+          }
+     
       }
       
       .answer {
@@ -92,6 +115,7 @@
         display: flex;
         align-items: flex-end;
         justify-content: center;
+        padding: 10px;           /* Añade espacio alrededor del contenido */
 
         p {
             margin: 0;
@@ -104,15 +128,24 @@
             border-radius: 5px;
           }
 
+    
+        
+          }
+
       
       }      
       .answer:hover {
         transform: scale(1.1);
-      }
+        -webkit-box-shadow: 0px 0px 24px -5px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 24px -5px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 24px -5px rgba(0,0,0,0.75);
+              }
       
       .answer.selected {
-        border-color: #f4cb00;
         transform: scale(1.1);
+        -webkit-box-shadow: 0px 0px 24px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 24px -5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 24px -5px rgba(0,0,0,0.75);
       }
       
       button {
@@ -205,3 +238,73 @@
         }
     }
   }
+
+
+.custom-nav {
+    font-family: 'PT Serif', serif;
+    background-image: url(/Award/bg-navbar.png);
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+
+    a:hover {
+      background-color: #bbaa5800; 
+    }
+      a {
+        color: #f4cb00;
+      
+        &:visited {
+          color: #f4cb00;
+        }
+    
+       
+      }
+    
+}
+.custom-nav a.router-link-exact-active::after {
+    background-color: #f4cb00;
+}
+
+.custom-footer {
+  font-family: 'PT Serif', serif;
+  background-image: url(/Award/bg-footer.png);
+  background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+  color: #F1D8A8; 
+  
+  a {
+    color: #f4cb00;
+  
+    &:visited {
+      color: #f4cb00;
+    }
+  }
+ 
+ ul {
+  li {
+    a {
+      color: #F1D8A8;
+   }
+   
+   a:visited {
+      color: #F1D8A8;
+   
+   }
+  }
+ }
+ 
+ 
+}
+
+.final-button {
+  display: flex;
+  flex-direction: column; /* Alinea los elementos en una columna */
+  align-items: center;    /* Centra el contenido horizontalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+  gap: 5px;               /* Espacio entre el texto y el spinner */
+  padding: 10px 20px;     /* Ajusta el relleno si es necesario */
+  position: relative;     /* Asegura que el spinner no desplace contenido externo */
+
+  .spinner {
+    font-size: 0.8rem;      /* Tamaño del spinner */
+    margin-top: 5px;        /* Espacio entre el texto y el spinner */
+  }
+}
+

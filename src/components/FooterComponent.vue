@@ -1,7 +1,9 @@
 <template>
-    <div class="footer-container">
+    <div class="footer-container" :class="{'custom-footer' : isCustomRoute}">
         <div class="footer-image-container">
-            <img src="/iconos.png" height="200" width="200">
+            <img v-if="!isCustomRoute" src="/iconos.png" height="200" width="200">
+            <img v-else src="/Award/logo-footer-grande.png" height="200" width="200">
+
         </div>
         <div>
             <ul>
@@ -26,10 +28,19 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref , computed} from 'vue';
+import { useRoute } from 'vue-router';
 
 const date = new Date;
 const Year = ref(date.getFullYear())
+const route = useRoute();
+
+
+
+const isCustomRoute = computed(() => {
+    return route.path === '/VitiAwards' ; // Cambia las rutas según tus necesidades
+});
+
 </script>
 
 <style lang="scss" scoped>
