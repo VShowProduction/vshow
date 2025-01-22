@@ -38,7 +38,7 @@
             <p>{{ answer.name }}</p>
           </div>
           <div class="link-container">
-            <a target="_blank" v-if="currentIndex == 18" :href="answer.link">Link del Clip</a>
+            <a target="_blank" v-if="currentIndex == 18" :href="answer.link"><font-awesome-icon :icon="['fas', 'link']" /><span>Ver Clip</span></a>
           </div>
 
           </div>

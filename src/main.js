@@ -20,7 +20,7 @@ import 'animate.css';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faUserSecret, faArrowUp, faLongArrowAltUp, faCheckCircle, faExclamationCircle, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faUserSecret, faArrowUp, faLongArrowAltUp, faCheckCircle, faExclamationCircle, faSpinner, faLink } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter,  faTwitch, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 import PrimeVue from 'primevue/config';
@@ -30,7 +30,7 @@ import { createPinia } from 'pinia'
 
 const pinia = createPinia();
 
-library.add (faSpinner, faTwitch, faTwitter, faUserSecret, faYoutube, faArrowUp, faLongArrowAltUp, faCheckCircle, faExclamationCircle, faTwitch)
+library.add (faLink, faSpinner, faTwitch, faTwitter, faUserSecret, faYoutube, faArrowUp, faLongArrowAltUp, faCheckCircle, faExclamationCircle, faTwitch)
 
 const app = createApp(App);
 app.use(pinia);
