@@ -32,7 +32,7 @@
         <div class="answers-container">
           <div v-for="(answer, index) in currentQuestion.answers" :key="index">
             <div 
-            @click="selectAnswer(answer.name, currentQuestion.text)"
+            @click="selectAnswer(answer.name, currentQuestion.text, answer.id, currentQuestion.id)"
             :class="['answer', { selected: userAnswers[currentIndex] && userAnswers[currentIndex].respuesta === answer.name }]"
             :style="{ backgroundImage: `url(${answer.image})` }">
             <p>{{ answer.name }}</p>
@@ -170,7 +170,7 @@ const userAnswers = ref([]);
 const finish = ref(false);
 const resultado = ref();
 
-const selectAnswer = (index, text) => {
+const selectAnswer = (index, text, idRes, idCat) => {
   if (!userAnswers.value[currentIndex.value]) {
     userAnswers.value[currentIndex.value] = {};
   }
@@ -181,7 +181,9 @@ const selectAnswer = (index, text) => {
   // Guarda la respuesta
   userAnswers.value[currentIndex.value] = {
     categoria: text,
-    respuesta: index
+    respuesta: index,
+    idRespuesta: idRes,
+    idCat: idCat
   };
 };
 
