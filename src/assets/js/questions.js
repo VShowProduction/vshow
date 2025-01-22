@@ -111,7 +111,7 @@ const questions = [
       {
         text: "Mejor dinamica 2024:",
         answers: [
-          { name: "Irelyh - Preguntas incomodas", image: "/vshow/Award/Irelyth-PreguntasIncomodas.png" },
+          { name: "Ireltyh - Preguntas incomodas", image: "/vshow/Award/Irelyth-PreguntasIncomodas.png" },
           { name: "AuroraAtria - El Club del oraculo", image: "/vshow/Award/AuroraAtria-ClubDelOraculo.png" },
           { name: "Taiga toragami - Warewolf Game", image: "/vshow/Award/TaigaToragami-WareworlfGame.png" },
           { name: "Nara shiranui - Dinamicas entre latinos y japoneses", image: "/vshow/Award/NaraShiranui.png" }
