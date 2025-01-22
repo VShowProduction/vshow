@@ -3,7 +3,7 @@
 
       <div v-if="visible" class="aviso">
         <button class="close-btn" @click="closeAviso">×</button> <!-- Botón de cierre -->
-        <RouterLink to="/FormularioWorldCup">
+        <RouterLink to="/VitiAwards">
         <div class="aviso-content">
         </div>
          </RouterLink>
