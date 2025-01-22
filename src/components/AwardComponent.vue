@@ -68,7 +68,7 @@
 <script setup lang="ts">
 import { onMounted, ref, computed } from 'vue';
 import quest from '../assets/js/questions';
-import { doc, setDoc, getDocs, collection, query, where } from 'firebase/firestore'
+import { doc, setDoc, getDocs, collection, query, where, getCountFromServer } from 'firebase/firestore'
 import { db } from '../assets/js/firebaseconect'
 import exp from '../assets/js/twitch';
 import { useRouter } from 'vue-router';
@@ -235,6 +235,10 @@ const submitAnswers = async () => {
 
   try {
 
+    const collectionRef = collection(db, "vitiAwards");
+    const snapshot = await getCountFromServer(collectionRef);
+    const total = snapshot.data().count; // Total de documentos
+
     // const data = await getDocs(collection(db, "vitiAwards"));
     // resultado.value = data.docs
     //   .map(doc => ({ ...doc.data() }))
@@ -242,7 +246,7 @@ const submitAnswers = async () => {
 
 
     // Enviar las respuestas a la base de datos
-    await setDoc(doc(db, "vitiAwards", userResponse.user.id), userResponse);
+    await setDoc(doc(db, "vitiAwards", total.toString()), userResponse);
 
     // Aquí se asume que el ID del usuario es el `accessToken`, pero puedes usar otro campo de ID si lo prefieres.
     // Puedes usar `accessToken.value` para crear un nombre único del documento en la colección "respuestas".
