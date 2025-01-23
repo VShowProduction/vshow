@@ -13,7 +13,7 @@ const questions = [
     id: 2,
     text: "Mejor Diseño:",
     answers: [
-      { id: 1, name: "Irelyh", image: "/vshow/Award/irelyth-diseno.png" },
+      { id: 1, name: "Irelyth", image: "/vshow/Award/irelyth-diseno.png" },
       { id: 2, name: "Mixte Nex", image: "/vshow/Award/mixtenex-diseno.png" },
       {
         id: 3,
