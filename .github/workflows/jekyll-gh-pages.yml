@@ -53,6 +53,7 @@ jobs:
           VITE_TWITCH_KEY: ${{secrets.VITE_TWITCH_KEY}}
           VITE_URL: ${{secrets.VITE_URL}}
           VITE_TWITCH_SECRET: ${{secrets.VITE_TWITCH_SECRET}}
+          BASE_URL: ${{secrets.BASE_URL}}
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
