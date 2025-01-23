@@ -55,12 +55,12 @@ const routes = [
     name: 'Login',
     component: LoginView, 
   },
-  {
-    path: '/Registros',
-    name: 'Registros',
-    component: RegistrosView,
-    meta: { requiresAuth: true }  // Ruta protegida
-  },
+  // {
+  //   path: '/Registros',
+  //   name: 'Registros',
+  //   component: RegistrosView,
+  //   meta: { requiresAuth: true }  // Ruta protegida
+  // },
   {
     path: '/Unete',
     name: 'unete',

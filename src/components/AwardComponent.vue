@@ -46,8 +46,8 @@
         </div>
         <div class="button-container">
           <button @click="backQuestion" v-if="currentIndex !== 0">Atras</button>
-          <button @click="nextQuestion" v-if="!isLastQuestion" :disabled="!userAnswers[currentIndex]">Siguiente</button>
-          <button class="final-button" @click="submitAnswers" v-else :disabled="!userAnswers[currentIndex] || isDisabled"> 
+          <button @click="nextQuestion" v-if="!isLastQuestion">Siguiente</button>
+          <button class="final-button" @click="submitAnswers" v-else :disabled="isDisabled"> 
             <span>Finalizar</span>
           </button>
         </div>
@@ -186,6 +186,7 @@ const finish = ref(false);
 const resultado = ref();
 
 const selectAnswer = (index, text, idRes, idCat) => {
+
   if (!userAnswers.value[currentIndex.value]) {
     userAnswers.value[currentIndex.value] = {};
   }
@@ -195,15 +196,18 @@ const selectAnswer = (index, text, idRes, idCat) => {
   }
   // Guarda la respuesta
   userAnswers.value[currentIndex.value] = {
-    categoria: text,
-    respuesta: index,
-    idRespuesta: idRes,
-    idCat: idCat
+    categoria: text ? text : '',
+    respuesta: index ? index : '',
+    idRespuesta: idRes ? idRes : null,
+    idCat: idCat ? idCat : null
   };
 };
 
 const nextQuestion = () => {
   currentIndex.value++;
+  if(userAnswers.value[currentIndex.value]){
+    
+  }
   currentQuestion.value = questions.value[currentIndex.value];
 };
 
@@ -224,8 +228,9 @@ const submitAnswers = async () => {
   const formattedDate = `${day}/${month}/${year}`;
 
   // Suponiendo que las respuestas del usuario están en `userAnswers`
-  const respuestas = userAnswers.value; // Ejemplo: ['ShuraHiwa', 'AmyDesu']
+  var respuestas = userAnswers.value; // Ejemplo: ['ShuraHiwa', 'AmyDesu']
 
+  respuestas = respuestas.filter(item => item !== undefined);
   // Objeto a enviar a Firebase
   const userResponse = {
     user: userData.value, // Asumiendo que accessToken contiene el ID del usuario
