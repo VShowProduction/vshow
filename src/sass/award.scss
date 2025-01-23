@@ -1,3 +1,6 @@
+@use 'variables' as *;
+
+
 .slide-in-enter-active,
 .slide-in-leave-active {
   transition: transform 0.5s ease-out, opacity 0.5s ease-out;
@@ -157,6 +160,8 @@
         -webkit-box-shadow: 0px 0px 24px -5px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 24px -5px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 24px -5px rgba(0,0,0,0.75);
+      border-color: $main;
+      border-width: 0.3rem;
       }
       
       button {
