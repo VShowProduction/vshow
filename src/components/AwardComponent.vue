@@ -242,13 +242,14 @@ const submitAnswers = async () => {
 
     const collectionRef = collection(db, "vitiAwards");
     const snapshot = await getCountFromServer(collectionRef);
-    const total = snapshot.data().count; // Total de documentos
+    const total = snapshot.data().count + 1; // Total de documentos
 
     // const data = await getDocs(collection(db, "vitiAwards"));
     // resultado.value = data.docs
     //   .map(doc => ({ ...doc.data() }))
     // const total = resultado.value.length + 1;
 
+    console.log(total);
 
     // Enviar las respuestas a la base de datos
     await setDoc(doc(db, "vitiAwards", total.toString()), userResponse);
