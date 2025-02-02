@@ -5,22 +5,30 @@
       <div>
         <img src="/Award/premiosVITI.png" height="300x">
       </div>
-      <div v-if="!finish && isLoading">
+      <!-- <div v-if="!finish && isLoading">
         <h1>Bienvenido a la votación por los ganadores de los Premios VITI</h1>
         <h4 style="font-style: italic;">*Para votar primero se debera loguear en twitch</h4>
       </div>
       <div v-else-if="isLoading">
         <h1>GRACIAS POR VOTAR, SU RESPUESTA HA SIDO ENVIADA EXITOSAMENTE</h1>
-      </div>
-      <div v-else>
+      </div> -->
+      <!-- <div v-else>
         <h1>
           <font-awesome-icon :icon="['fas', 'spinner']" spin />
         </h1>
+      </div> -->
+      <div>
+        <h1>LAS VOTACIONES YA HAN CERRADO, MUCHAS GRACIAS POR PARTICIPAR</h1>
+        <h1>TE ESPERAMOS ESTE 8 DE FEBRERO EN LOS CANALES DE NUESTRAS HOST</h1>
+        <ul class="ul-final">
+          <li>SHURA HIWA <a href="https://www.twitch.tv/shurahiwa" target="_blank"><font-awesome-icon :icon="['fab', 'twitch']" /></a></li>
+          <li>IRELYTH <a href="https://www.twitch.tv/irelyth" target="_blank"><font-awesome-icon :icon="['fab', 'twitch']" /></a></li>
+        </ul>
       </div>
-      <div v-if="!finish && isLoading">
+      <!-- <div v-if="!finish && isLoading">
         <button class="twitch-button" @click="loginTwitch"><font-awesome-icon :icon="['fab', 'twitch']" />
           LOGIN</button>
-      </div>
+      </div> -->
     </div>
 
     <div v-else>
