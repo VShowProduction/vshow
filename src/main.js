@@ -12,6 +12,7 @@ import './sass/form.scss'
 import './sass/registros.scss'
 import './sass/aviso.scss'
 import './sass/award.scss'
+import './sass/votos.scss'
 
 
 

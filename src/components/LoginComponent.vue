@@ -48,7 +48,7 @@ const login = async () => {
                 if (u.user === name.value && u.pass === pass.value) {
                     store.isLoged = true;
 
-                    router.push('/Unete')
+                    router.push('/VotosViti')
                 }
             });
         } catch (e) {

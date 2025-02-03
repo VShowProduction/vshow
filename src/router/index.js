@@ -12,6 +12,7 @@ import { useUserStore } from '../store/userStore'
 import WorkingView from '../views/WorkingView.vue'
 import SolicitudesView from '../views/SolicitudesView.vue'
 import AwardView from '../views/AwardView.vue'
+import VotesView from '../views/VotesView.vue'
 
 const routes = [
   {
@@ -66,12 +67,12 @@ const routes = [
     name: 'unete',
     component: WorkingView, 
   },
-  // {
-  //   path: '/Solicitudes',
-  //   name: 'Solicitudes',
-  //   component: SolicitudesView,
-  //   meta: { requiresAuth: true }  // Ruta protegida
-  // },
+  {
+    path: '/VotosViti',
+    name: 'VotosViti',
+    component: VotesView,
+    meta: { requiresAuth: true }  // Ruta protegida
+  },
   {
     path: '/:pathMatch(.*)*',  // Ruta comodín para redirigir a la página de inicio
     redirect: { name: 'home' }
