@@ -20,37 +20,37 @@ const routes = [
     name: 'home',
     component: HomeView
   },
-  {
-    path: '/contacto',
-    name: 'contact',
-    component: ContactView
-  },
-  {
-    path: '/proximosEventos',
-    name: 'nextEvents',
-    component: NextEventsView
-  },
-  {
-    path: '/proyectos',
-    name: 'proyects',
-    component: ProyectsView
-  },
-  {
-    path: '/proyectos/:id',  // Ruta dinámica con parámetro id
-    name: 'proyectDetail',
-    component: ProyectDetailView,  // Componente para mostrar detalles del proyecto
-    props: true // Esto permite que el id sea pasado como prop al componente
-  },
-  {
-    path: '/servicios',
-    name: 'services',
-    component: ServicesView, 
-  },
   // {
-  //   path: '/FormularioWorldCup',
-  //   name: 'formulario',
-  //   component: FormularioView, 
+  //   path: '/contacto',
+  //   name: 'contact',
+  //   component: ContactView
   // },
+  // {
+  //   path: '/proximosEventos',
+  //   name: 'nextEvents',
+  //   component: NextEventsView
+  // },
+  // {
+  //   path: '/proyectos',
+  //   name: 'proyects',
+  //   component: ProyectsView
+  // },
+  // {
+  //   path: '/proyectos/:id',  // Ruta dinámica con parámetro id
+  //   name: 'proyectDetail',
+  //   component: ProyectDetailView,  // Componente para mostrar detalles del proyecto
+  //   props: true // Esto permite que el id sea pasado como prop al componente
+  // },
+  // {
+  //   path: '/servicios',
+  //   name: 'services',
+  //   component: ServicesView, 
+  // },
+  // // {
+  // //   path: '/FormularioWorldCup',
+  // //   name: 'formulario',
+  // //   component: FormularioView, 
+  // // },
   {
     path: '/login',
     name: 'Login',
@@ -62,11 +62,11 @@ const routes = [
   //   component: RegistrosView,
   //   meta: { requiresAuth: true }  // Ruta protegida
   // },
-  {
-    path: '/Unete',
-    name: 'unete',
-    component: WorkingView, 
-  },
+  // {
+  //   path: '/Unete',
+  //   name: 'unete',
+  //   component: WorkingView, 
+  // },
   {
     path: '/VotosViti',
     name: 'VotosViti',

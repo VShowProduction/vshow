@@ -6,10 +6,14 @@ import ScrollTopButton from './components/auxiliar/ScrollTopButton.vue';
 
 
 <template>
-    <NavBar></NavBar>
+    <!-- <NavBar></NavBar>
     <RouterView></RouterView>
     <Footer></Footer>
-    <ScrollTopButton></ScrollTopButton>
+    <ScrollTopButton></ScrollTopButton> -->
+    <div>
+    <h1>NOS MUDAMOS DE HOST</h1>
+    <a href="https://www.vshowproduction.com/" target="_blank">NUEVA PAGINA</a>
+  </div>
 </template>
 
 <style>
